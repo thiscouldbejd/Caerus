@@ -1230,6 +1230,5 @@
   </Target>
   <PropertyGroup>
     <PreBuildEvent>$(SolutionDir)\Generate-Resources.bat $(ProjectDir)Resources\Source $(ProjectDir)Resources\Compiled en-GB</PreBuildEvent>
-    <!-- <PreBuildEvent>$(ProjectDir)..\Shared-Batch-Files\Generate-Resources-2010.bat $(ProjectDir)Resources\Source $(ProjectDir)Resources\Compiled en-GB</PreBuildEvent> -->
   </PropertyGroup>
 </Project>
