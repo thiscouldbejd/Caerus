@@ -1,0 +1,19 @@
+﻿<# Add_Class(a:="Directories", d:="This Enum is used to help define the Common Properties for Directory Entry Manipulation") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Enum(n:="AccountUsername", v:=1, d:="The Username of a Directory Account") #>
+<# Add_Enum(n:="DisplayName", v:=2, d:="The Display Name of a Directory Account") #>
+<# Add_Enum(n:="GivenName", v:=3, d:="The Given Name of a Directory Account") #>
+<# Add_Enum(n:="Surname", v:=4, d:="The Surname of a Directory Account") #>
+<# Add_Enum(n:="HomeDirectory", v:=5, d:="The Home Directory of a Directory Account") #>
+<# Add_Enum(n:="HomeDirectoryDrive", v:=6, d:="The Home Drive of a Directory Account") #>
+<# Add_Enum(n:="ProfileDirectory", v:=7, d:="The Profile Directory of a Directory Account") #>
+<# Add_Enum(n:="PrincipleName", v:=8, d:="The Principle Name of a Directory Account") #>
+<# Add_Enum(n:="EmployeeIdentifier", v:=9, d:="The Employee Identifier of a Directory Account") #>
+<# Add_Enum(n:="Department", v:=10, d:="The Department of a Directory Account") #>
+<# Add_Enum(n:="CommonName", v:=11, d:="The Common Name of a Directory Entry") #>
+<# Add_Enum(n:="Description", v:=12, d:="The Description of a Directory Entry") #>
+<# Add_Enum(n:="DomainController", v:=13, d:="The Description of a Domain Controller") #>
+<# Add_Enum(n:="ExtensionName", v:=14, d:="The Extension Name of a Directory Entry") #>
+<# Add_Enum(n:="ObjectClass", v:=15, d:="The Object Class of a Directory Entry") #>
+<# Add_Enum(n:="ObjectCategory", v:=16, d:="The Object Category of a Directory Entry") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="NONE", t:="System.Int64", v:=0, d:="None") #>
+<# Add_Enum(n:="AUTHORISED", v:=1, d:="Authorised") #>
+<# Add_Enum(n:="UN_AUTHORISED", v:=2, d:="UnAuthorised") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

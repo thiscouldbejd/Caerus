@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="NONE", t:="System.Int64", v:=0) #>
+<# Add_Enum(n:="SECURE_UP", d:="This indicates port security is operational.", v:=1) #>
+<# Add_Enum(n:="SECURE_DOWN", d:="This indicates port security is not operational. This happens when port security is configured to be enabled but could not be enabled due to certain reasons such as conflict with other features.", v:=2) #>
+<# Add_Enum(n:="SHUTDOWN", d:="This indicates that the port is shutdown due to port security violation when the object cpsIfViolationAction is of type 'shutdown'.", v:=3) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

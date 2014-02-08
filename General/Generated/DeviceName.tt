@@ -1,0 +1,14 @@
+﻿<# Add_Class(d:="") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Fqdn}") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Area;Number") #>
+<# Add_Field(n:="Fqdn", t:="System.String", d:="Fully Qualified Name") #>
+<# Add_Field(n:="ShortName", t:="System.String", d:="Shortened Version of the Name") #>
+<# Add_Field(n:="IpAddresses", t:="System.Net.IPAddress()", d:="IP Addresses for the Network Name") #>
+<# Add_Field(n:="Aliases", t:="System.String()", d:="DNS Aliases for the Name") #>
+<# Add_Field(n:="Organisation", t:="System.String", a:="R") #>
+<# Add_Field(n:="Role", t:="System.String", a:="R") #>
+<# Add_Field(n:="Layer", t:="System.String", a:="R") #>
+<# Add_Field(n:="Area", t:="System.String", a:="R") #>
+<# Add_Field(n:="Number", t:="System.Int32", a:="R") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

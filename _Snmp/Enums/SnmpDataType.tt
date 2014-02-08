@@ -1,0 +1,32 @@
+﻿<# Add_Class(a:="Snmp") #>
+<# Add_Enum(n:="ASN1_BOOLEAN", v:=&H1, t:="System.Byte") #>
+<# Add_Enum(n:="ASN1_INTEGER", v:=&H2, t:="System.Byte") #>
+<# Add_Enum(n:="ASN1_BIT_STRING", v:=&H3, t:="System.Byte") #>
+<# Add_Enum(n:="ASN1_OCTET_STRING", v:=&H4, t:="System.Byte") #>
+<# Add_Enum(n:="ASN1_NULL", v:=&H5, t:="System.Byte") #>
+<# Add_Enum(n:="ASN1_OBJECT_IDENTIFIER", v:=&H6, t:="System.Byte") #>
+<# Add_Enum(n:="ASN1_REAL", v:=&H9, t:="System.Byte") #>
+<# Add_Enum(n:="ASN1_ENUMERATED", v:=&H10, t:="System.Byte") #>
+<# Add_Enum(n:="ASN1_SET", v:=&H11, t:="System.Byte") #>
+<# Add_Enum(n:="ASN1_PRINTABLE_STRING", v:=&H13, t:="System.Byte") #>
+<# Add_Enum(n:="ASN1_T61_STRING", v:=&H14, t:="System.Byte") #>
+<# Add_Enum(n:="ASN1_IA5_STRING", v:=&H16, t:="System.Byte") #>
+<# Add_Enum(n:="ASN1_UTC_TIME", v:=&H17, t:="System.Byte") #>
+<# Add_Enum(n:="ASN1_SEQUENCE", v:=&H30, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_IP_ADDRESS", v:=&H40, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_COUNTER_32", v:=&H41, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_GAUGE", v:=&H42, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_TIMETICKS", v:=&H43, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_OPAQUE", v:=&H44, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_PHYSICAL_ADDRESS", v:=&H45, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_COUNTER_64", v:=&H46, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_UNIT_32", v:=&H47, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_PDU_GETREQUEST", v:=&HA0, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_PDU_GETNEXTREQUEST", v:=&HA1, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_PDU_GETRESPONSE", v:=&HA2, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_PDU_SETREQUEST", v:=&HA3, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_PDU_TRAP", v:=&HA4, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_PDU_GETBULKREQUEST", v:=&HA5, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_PDU_INFORMREQUEST", v:=&HA6, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_PDU_TRAPV2", v:=&HA7, t:="System.Byte") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

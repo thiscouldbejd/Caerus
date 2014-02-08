@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="None", t:="System.Int64", v:=0, d:="No HT/802.11N Mode.") #>
+<# Add_Enum(n:="Legacy", v:=1, d:="In this mode, packets are transmitted in the legacy 802.11a/g format.") #>
+<# Add_Enum(n:="Mixed", v:=2, d:="In this mode, packets are transmitted with a preamble that can be recognized by the legacy 802.11a/g devices. Both mixed mode and legacy packets can be recognised by the receiving 802.11n interface.") #>
+<# Add_Enum(n:="GreenField", v:=3, d:="In this mode, a transmitting station won't add a preamble to the packets sent.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

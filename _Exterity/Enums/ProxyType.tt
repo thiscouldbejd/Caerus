@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Exterity", d:="Enum Representing Exterity Proxy Type") #>
+<# Add_Enum(n:="Direct", t:="System.Int64", d:="Proxy Type is Direct (e.g. No Proxy)", v:=0) #>
+<# Add_Enum(n:="Manual", d:="Proxy Type is manually defined", v:=1) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

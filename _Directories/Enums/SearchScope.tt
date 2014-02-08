@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Directories", d:="This Enum is used to help define the Scope of Directory Services Searches") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Enum(n:="Base", v:=1, d:="Indicates that a Search should be performed at the Base Level only") #>
+<# Add_Enum(n:="OneLevel", v:=2, d:="Indicates that a Search should be performed at the Base Level and One Level below only") #>
+<# Add_Enum(n:="SubTree", v:=3, d:="Indicates that a Search should be performed at the Base Level and all Levels below") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Snmp", i:="SnmpLengthedBase") #>
+<# Add_Behaviour(n:="Settable") #>
+<# Add_Field(n:="ObjectId", t:="System.String", d:="Need to do a TrimStart(FULL_STOP) on this") #>
+<# Add_Field(n:="ObjectType", t:="SnmpDataType", f:="SnmpDataType.ASN1_NULL") #>
+<# Add_Field(n:="ObjectValue", t:="System.Object") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

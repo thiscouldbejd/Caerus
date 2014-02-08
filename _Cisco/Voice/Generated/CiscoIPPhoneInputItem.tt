@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Cisco", i:="System.Web.UI.WebControls.WebControl", d:="Cisco IP-Phone Input Item") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Values:{DisplayName}") #>
+<# Add_Field(n:="DisplayName", t:="System.String") #>
+<# Add_Field(n:="QueryStringParamater", t:="System.String") #>
+<# Add_Field(n:="InputFlags", t:="System.String") #>
+<# Add_Field(n:="DefaultValue", t:="System.String") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

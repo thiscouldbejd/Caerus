@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="Active", t:="System.Int64") #>
+<# Add_Enum(n:="PowerSave") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

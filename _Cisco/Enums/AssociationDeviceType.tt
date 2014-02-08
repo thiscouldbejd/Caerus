@@ -1,0 +1,29 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="EthernetAP", t:="System.Int64", d:="Ethernet Access Point", v:=76) #>
+<# Add_Enum(n:="EthernetBridge", d:="Ethernet Bridge", v:=77) #>
+<# Add_Enum(n:="PC3000Client", d:="Client with a 3000 Radio", v:=84) #>
+<# Add_Enum(n:="SerialUC", d:="Serial Port Universal Client", v:=85) #>
+<# Add_Enum(n:="EthernetUC", d:="Ethernet Universal Client", v:=86) #>
+<# Add_Enum(n:="PC3500Client", d:="Client with 3500 Radio", v:=101) #>
+<# Add_Enum(n:="Generic80211Client", d:="Client of an Unknown Radio Type and Non-Cisco device", v:=104) #>
+<# Add_Enum(n:="PC4800Client", d:="Client with 4800 Radio", v:=109) #>
+<# Add_Enum(n:="PC3100Client", d:="Client with 3100 Radio", v:=110) #>
+<# Add_Enum(n:="MC", d:="Multiple-Client Ethernet", v:=111) #>
+<# Add_Enum(n:="EthernetClient", d:="Ethernet Client of a WGB", v:=112) #>
+<# Add_Enum(n:="PC4800bClient", d:="Client with 4800b Radio", v:=117) #>
+<# Add_Enum(n:="WGBNoDiversity", d:="WGB with one antenna", v:=123) #>
+<# Add_Enum(n:="WGB", d:="WGB with two antennas", v:=124) #>
+<# Add_Enum(n:="Series350Client", d:="Client with 350 series radio", v:=127) #>
+<# Add_Enum(n:="Series370Client", d:="Client with 370 series radio", v:=128) #>
+<# Add_Enum(n:="C1100SeriesAP", d:="Cisco 1100 series AP", v:=129) #>
+<# Add_Enum(n:="C1410SeriesBridge", d:="Cisco 1410 series bridge", v:=130) #>
+<# Add_Enum(n:="C1200SeriesAP", d:="Cisco 1200 series AP", v:=132) #>
+<# Add_Enum(n:="MP2xClient", d:="client with MP2x IEEE 802.11g radio", v:=133) #>
+<# Add_Enum(n:="C350SeriesAP", d:="Cisco IOS 350 series AP", v:=134) #>
+<# Add_Enum(n:="CB21agClient", d:="Cisco CB21AG/PI21AG IEEE 802.lla/b/g client", v:=135) #>
+<# Add_Enum(n:="RadioKodiak", d:="Cisco IEEE 802.11a AIR-RM21A-x-K9 and AIR-RM22A-x-K9 radio", v:=136) #>
+<# Add_Enum(n:="C1130SeriesAP", d:="Cisco 1130 series AP", v:=137) #>
+<# Add_Enum(n:="C1310SeriesBridge", d:="Cisco 1310 series bridge", v:=138) #>
+<# Add_Enum(n:="C7920phone", d:="Cisco 7920 series phone", v:=139) #>
+<# Add_Enum(n:="C1240SeriesAP", d:="Cisco 1240 series AP", v:=140) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

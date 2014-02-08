@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="IBM", d:="Class Representing an IBM Power State") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{State}: {Details}") #>
+<# Add_Field(n:="State", t:="PowerDomainState") #>
+<# Add_Field(n:="Details", t:="System.String") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

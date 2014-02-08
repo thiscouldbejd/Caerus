@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="NONE", t:="System.Int64", v:=0, d:="None") #>
+<# Add_Enum(n:="FORCE_UNAUTH", v:=1, d:="Forced UnAuthorised") #>
+<# Add_Enum(n:="AUTO", v:=2, d:="Automatic") #>
+<# Add_Enum(n:="FORCE_AUTH", v:=3, d:="Forced Authorised") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

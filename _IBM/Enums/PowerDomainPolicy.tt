@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="IBM", d:="Enum Representing IBM Power Domain Policy") #>
+<# Add_Enum(n:="RedundantWithoutPerformanceImpact", d:="Policy is Redundant Without Performance Impact", v:=0) #>
+<# Add_Enum(n:="RedundantWithPerformanceImpact", d:="Policy is Redundant With Performance Impact", v:=1) #>
+<# Add_Enum(n:="NonRedundant", d:="Policy is Non Redundant", v:=2) #>
+<# Add_Enum(n:="NotApplicable", d:="Policy is Non Applicable", v:=255) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

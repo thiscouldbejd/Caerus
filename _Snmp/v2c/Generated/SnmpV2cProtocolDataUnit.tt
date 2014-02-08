@@ -1,0 +1,2 @@
+﻿<# Add_Class(a:="Snmp", i:="SnmpProtocolDataUnitBase") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

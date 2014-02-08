@@ -1,0 +1,12 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="NONE", t:="System.Int64", v:=0) #>
+<# Add_Enum(n:="INITIALISE", v:=1) #>
+<# Add_Enum(n:="DISCONNECTED", v:=2) #>
+<# Add_Enum(n:="CONNECTING", v:=3) #>
+<# Add_Enum(n:="AUTHENTICATING", v:=4) #>
+<# Add_Enum(n:="AUTHENTICATED", v:=5) #>
+<# Add_Enum(n:="ABORTING", v:=6) #>
+<# Add_Enum(n:="HELD", v:=7) #>
+<# Add_Enum(n:="FORCE_AUTH", v:=8) #>
+<# Add_Enum(n:="FORCE_UNAUTH", v:=9) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

@@ -1,0 +1,15 @@
+﻿<# Add_Class(a:="Cisco", d:="Switch") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Name") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Name}") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<#@ include file="..\Definitions\Device.def" #>
+<# Add_Field(n:="Interfaces", t:="SwitchInterfaceCollection", f:="NEW", m:="Snmp:1.3.6.1.2.1.2.2.1.1|Snmp_Field:Index", d:="Interfaces for the Device.") #>
+<# Add_Field(n:="BridgePorts", t:="BridgePortCollection", f:="NEW", m:="Snmp:1.3.6.1.2.1.17.1.4.1.1|Snmp_Field:Index", d:="Bridge Ports for the Device.") #>
+<# Add_Field(n:="ForwardingAddresses", t:="BridgeForwardingAddressCollection", f:="NEW", m:="Snmp:1.3.6.1.2.1.17.4.3.1.1.#|Snmp_Field:ForwardingAddress", d:="Forwarding Addresses for the Device.") #>
+<# Add_Field(n:="Vlans", t:="VlanCollection", f:="NEW", m:="Snmp:1.3.6.1.4.1.9.9.46.1.3.1.1.2.1.#|Snmp_Field:Index") #>
+<# Add_Field(n:="Entities", t:="EntityCollection", f:="NEW", m:="Snmp:1.3.6.1.2.1.47.1.1.1.1.2.#|Snmp_Field:Index") #>
+<# Add_Field(n:="Fans", t:="FanMonitorCollection", f:="NEW", m:="Snmp:1.3.6.1.4.1.9.9.13.1.4.1.2.#|Snmp_Field:Index") #>
+<# Add_Field(n:="Supplies", t:="PowerMonitorCollection", f:="NEW", m:="Snmp:1.3.6.1.4.1.9.9.13.1.5.1.2.#|Snmp_Field:Index") #>
+<# Add_Field(n:="Temperatures", t:="TemperatureMonitorCollection", f:="NEW", m:="Snmp:1.3.6.1.4.1.9.9.13.1.3.1.2.#|Snmp_Field:Index") #>
+<# Add_Field(n:="Voltages", t:="VoltageMonitorCollection", f:="NEW", m:="Snmp:1.3.6.1.4.1.9.9.13.1.2.1.2.#|Snmp_Field:Index") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

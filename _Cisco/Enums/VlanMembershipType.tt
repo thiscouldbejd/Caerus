@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="NONE", t:="System.Int64", v:=0) #>
+<# Add_Enum(n:="STATIC", v:=1) #>
+<# Add_Enum(n:="DYNAMIC", v:=2) #>
+<# Add_Enum(n:="MULTI_VLAN", v:=3) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

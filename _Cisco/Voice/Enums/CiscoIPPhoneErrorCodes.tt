@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="CiscoIPPhoneExecuteParsingError", t:="System.Int64") #>
+<# Add_Enum(n:="CiscoIPPhoneResponseResponseFramingError") #>
+<# Add_Enum(n:="InternalError") #>
+<# Add_Enum(n:="AuthenticationError") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

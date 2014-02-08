@@ -1,0 +1,12 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="Nothing", v:=0, t:="System.Int64") #>
+<# Add_Enum(n:="Select", v:=1) #>
+<# Add_Enum(n:="Update", v:=2) #>
+<# Add_Enum(n:="Submit", v:=3) #>
+<# Add_Enum(n:="Back", v:=4) #>
+<# Add_Enum(n:="Forward", v:=5) #>
+<# Add_Enum(n:="Cancel", v:=6) #>
+<# Add_Enum(n:="Dial", v:=7) #>
+<# Add_Enum(n:="EditDial", v:=8) #>
+<# Add_Enum(n:="Exit", v:=9) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

@@ -1,0 +1,6 @@
+﻿<# Add_Class() #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{ShortName}") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Field(n:="Name", t:="System.String", d:="Fully Qualified Name") #>
+<# Add_Field(n:="ShortName", t:="System.String", d:="Shortened Version of the Name") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

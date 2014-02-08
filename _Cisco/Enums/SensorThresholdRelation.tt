@@ -1,0 +1,8 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="LessThan", t:="System.Int64") #>
+<# Add_Enum(n:="LessThanOrEqual") #>
+<# Add_Enum(n:="GreaterThan") #>
+<# Add_Enum(n:="GreaterThanOrEqual") #>
+<# Add_Enum(n:="EqualTo") #>
+<# Add_Enum(n:="NotEqualTo") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

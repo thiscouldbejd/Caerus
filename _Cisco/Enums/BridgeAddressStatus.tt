@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="Other", t:="System.Int64", v:=1, d:="None of the following. This would include the case where some other MIB object (not the corresponding instance of dot1dTpFdbPort, nor an entry in the dot1dStaticTable) is being used to determine if and how frames addressed to the value of the corresponding instance of dot1dTpFdbAddress are being forwarded.") #>
+<# Add_Enum(n:="Invalid", v:=2, d:="This entry is not longer valid (e.g., it was learned but has since aged-out), but has not yet been flushed from the table.") #>
+<# Add_Enum(n:="Learned", v:=3, d:="The value of the corresponding instance of dot1dTpFdbPort was learned, and is being used.") #>
+<# Add_Enum(n:="Self", v:=4, d:="The value of the corresponding instance of dot1dTpFdbAddress represents one of the bridge's addresses.  The corresponding instance of dot1dTpFdbPort indicates which of the bridge's ports has this address.") #>
+<# Add_Enum(n:="Mgmt", v:=5, d:="The value of the corresponding instance of dot1dTpFdbAddress is also the value of an existing instance of dot1dStaticAddress.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

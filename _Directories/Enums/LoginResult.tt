@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Directories") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Enum(n:="OK", v:=0, d:="Login was processed correctly") #>
+<# Add_Enum(n:="ACCOUNT_DOES_NOT_EXIST", v:=1, d:="Login Account does not exist") #>
+<# Add_Enum(n:="ACCOUNT_INACTIVE", v:=2, d:="Login Account is Inactive") #>
+<# Add_Enum(n:="WRONG_PASSWORD", v:=3, d:="Login Password is Wrong") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

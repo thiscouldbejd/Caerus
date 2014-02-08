@@ -1,0 +1,19 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="Yocto", t:="System.Int64") #>
+<# Add_Enum(n:="Zepto") #>
+<# Add_Enum(n:="Atto") #>
+<# Add_Enum(n:="Femto") #>
+<# Add_Enum(n:="Pico") #>
+<# Add_Enum(n:="Nano") #>
+<# Add_Enum(n:="Micro") #>
+<# Add_Enum(n:="Milli") #>
+<# Add_Enum(n:="Units") #>
+<# Add_Enum(n:="Kilo") #>
+<# Add_Enum(n:="Mega") #>
+<# Add_Enum(n:="Giga") #>
+<# Add_Enum(n:="Tera") #>
+<# Add_Enum(n:="Exa") #>
+<# Add_Enum(n:="Peta") #>
+<# Add_Enum(n:="Zetta") #>
+<# Add_Enum(n:="Yotta") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

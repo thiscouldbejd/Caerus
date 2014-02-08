@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Exterity", d:="Enum Representing Exterity Video Format Type") #>
+<# Add_Enum(n:="None", t:="System.Int64", d:="Type is None", v:=-1) #>
+<# Add_Enum(n:="PAL", d:="Type is PAL", v:=0) #>
+<# Add_Enum(n:="NTSC", d:="Type is NTSC", v:=1) #>
+<# Add_Enum(n:="SECAM", d:="Type is SECAM", v:=2) #>
+<# Add_Enum(n:="BW", d:="Type is Black and White", v:=3) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

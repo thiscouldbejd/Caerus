@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="NONE", t:="System.Int64", v:=0) #>
+<# Add_Enum(n:="MHZ", v:=1) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

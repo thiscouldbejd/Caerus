@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Cisco", i:="System.Web.UI.WebControls.WebControl", d:="Cisco IP-Phone Directory Entry") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Values:{Name}") #>
+<# Add_Field(n:="Name", t:="System.String") #>
+<# Add_Field(n:="Telephone", t:="System.String") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

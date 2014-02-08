@@ -1,0 +1,8 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="Unknown", t:="System.Int64", v:=0) #>
+<# Add_Enum(n:="IPv4", v:=1) #>
+<# Add_Enum(n:="IPv6", v:=2) #>
+<# Add_Enum(n:="IPv4z", v:=3) #>
+<# Add_Enum(n:="IPv6z", v:=4) #>
+<# Add_Enum(n:="DNS", v:=5) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="Init", t:="System.Int64", d:="Association request received from client") #>
+<# Add_Enum(n:="Auth", d:="802.11 authenticated but not 802.11 associated") #>
+<# Add_Enum(n:="AssocAuth", d:="802.11 associated and 802.1x authenticated") #>
+<# Add_Enum(n:="Assoc", d:="802.11 associated but 802.1x not authenticated") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

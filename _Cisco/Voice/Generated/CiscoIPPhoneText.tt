@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Cisco", i:="System.Web.UI.WebControls.WebControl", d:="Cisco IP-Phone Text") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Values:{Text}") #>
+<# Add_Field(n:="Title", t:="System.String") #>
+<# Add_Field(n:="Prompt", t:="System.String") #>
+<# Add_Field(n:="Text", t:="System.String") #>
+<# Add_Field(n:="SoftKeys", t:="CiscoIPPhoneSoftKeyCollection", f:="NEW") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

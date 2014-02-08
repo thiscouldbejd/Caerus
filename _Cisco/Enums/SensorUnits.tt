@@ -1,0 +1,17 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="None", t:="System.Int64", v:=0) #>
+<# Add_Enum(n:="Other", v:=1) #>
+<# Add_Enum(n:="Unknown", v:=2) #>
+<# Add_Enum(n:="VoltsAC", v:=3) #>
+<# Add_Enum(n:="VoltsDC", v:=4) #>
+<# Add_Enum(n:="Amperes", v:=5) #>
+<# Add_Enum(n:="Watts", v:=6) #>
+<# Add_Enum(n:="Hertz", v:=7) #>
+<# Add_Enum(n:="Celsius", v:=8) #>
+<# Add_Enum(n:="PercentRH", v:=9) #>
+<# Add_Enum(n:="RPM", v:=10) #>
+<# Add_Enum(n:="CMM", v:=11) #>
+<# Add_Enum(n:="Boolean", v:=12) #>
+<# Add_Enum(n:="SpecialEnum", v:=13) #>
+<# Add_Enum(n:="DBM", v:=14) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

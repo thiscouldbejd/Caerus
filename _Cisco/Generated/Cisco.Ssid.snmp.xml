@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Caerus.Snmp.ObjectMapping>
+
+		<InheritsMappings>True</InheritsMappings>
+
+		<FieldMappings>
+
+			<Caerus.Snmp.FieldMapping->
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>Name</Name>
+					<Value>1.3.6.1.4.1.9.9.272.1.1.1.6.1.2.{Parent.Index}.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>Broadcast</Name>
+					<Value>1.3.6.1.4.1.9.9.272.1.1.1.6.1.3.{Parent.Index}.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MaxAssociations</Name>
+					<Value>1.3.6.1.4.1.9.9.272.1.1.1.6.1.4.{Parent.Index}.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+			</Caerus.Snmp.FieldMapping->
+
+		</FieldMappings>
+
+		<TableMappings>
+
+			<Caerus.Snmp.TableMapping->
+
+				<Caerus.Snmp.TableMapping>
+
+					<Name>Associations</Name>
+
+					<MappingType>ClientAssociationCollection</MappingType>
+
+					<FieldMappings>
+
+						<Caerus.Snmp.FieldMapping->
+
+							<Caerus.Snmp.FieldMapping>
+								<Name>ClientAddress</Name>
+								<Value>1.3.6.1.4.1.9.9.273.1.2.1.1.2.{Parent.Index}.{NameOid}.#</Value>
+							</Caerus.Snmp.FieldMapping>
+
+						</Caerus.Snmp.FieldMapping->
+
+					</FieldMappings>
+
+				</Caerus.Snmp.TableMapping>
+
+			</Caerus.Snmp.TableMapping->
+
+		</TableMappings>
+
+	</Caerus.Snmp.ObjectMapping>

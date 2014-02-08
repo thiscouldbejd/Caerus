@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="IBM", d:="Enum Representing Switch Module State") #>
+<# Add_Enum(n:="Unknown", d:="Status is Unknown", v:=0) #>
+<# Add_Enum(n:="Good", d:="Status is Good", v:=1) #>
+<# Add_Enum(n:="Warning", d:="Status is Warning", v:=2) #>
+<# Add_Enum(n:="Bad", d:="Status is Bad", v:=3) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

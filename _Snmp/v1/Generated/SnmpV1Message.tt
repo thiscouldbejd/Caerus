@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Snmp", i:="SnmpLengthedBase") #>
+<# Add_Field(n:="Version", t:="SnmpVersion") #>
+<# Add_Field(n:="Community", t:="System.String") #>
+<# Add_Field(n:="ProtocolDataUnit", t:="SnmpV1ProtocolDataUnit") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

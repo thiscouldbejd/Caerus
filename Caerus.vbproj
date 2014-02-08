@@ -1,0 +1,1235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{681D12E4-53CC-4CE9-8AD8-6D5407EEE9F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Caerus</RootNamespace>
+    <AssemblyName>Caerus</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <!-- Note: If MSBuild.Community.Tasks is not installed on Build Machine -->
+    <!-- Set the MSBuildCommunityTasksPath Property in MSBuild.Community.Tasks.Targets (Packages) to '.' e.g. -->
+    <!-- <MSBuildCommunityTasksPath Condition="'$(MSBuildCommunityTasksPath)' == ''">.</MSBuildCommunityTasksPath> -->
+    <MSBuildTasksPath>Packages\MSBuildTasks.1.4.0.65\tools</MSBuildTasksPath>
+    <NUnitToolPath>Packages\NUnit.Runners.2.6.2\tools</NUnitToolPath>
+    <RemoveIntegerChecks>False</RemoveIntegerChecks>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionInfer>Off</OptionInfer>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <RunSourceAnalysis>False</RunSourceAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Caerus.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG=1,TRACE=1,TESTING=1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Caerus.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>Izorian.Network.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <DefineConstants>DEBUG=1,TRACE=1,TESTING=1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>Caerus.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Leviathan">
+      <HintPath>$(LEVIATHAN_PATH)\Leviathan.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Reference Include="nunit.framework">
+      <HintPath>Packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Enums\DeviceStatus.tt" />
+    <None Include="Enums\DeviceType.tt" />
+    <None Include="Enums\HealthStatus.tt" />
+    <None Include="Enums\InterfaceStatus.tt" />
+    <None Include="Enums\InterfaceType.tt" />
+    <None Include="Enums\SoftwareType.tt" />
+    <None Include="Enums\StorageType.tt" />
+    <None Include="General\Definitions\NetworkDevice.def" />
+    <EmbeddedResource Include="General\Generated\Computer.snmp.xml">
+      <DependentUpon>Computer.tt</DependentUpon>
+    </EmbeddedResource>
+    <None Include="General\Generated\Computer.tt" />
+    <None Include="General\Generated\DeltaCounter32.tt" />
+    <EmbeddedResource Include="General\Generated\GeneralDevice.snmp.xml">
+      <DependentUpon>GeneralDevice.tt</DependentUpon>
+    </EmbeddedResource>
+    <None Include="General\Generated\GeneralDevice.tt" />
+    <None Include="General\Generated\GeneralDeviceCollection.tt" />
+    <None Include="General\Generated\Health.tt" />
+    <None Include="General\Generated\InterfaceName.tt" />
+    <None Include="General\Generated\InterfaceSpeed.tt" />
+    <None Include="General\Generated\Location.tt" />
+    <None Include="General\Generated\DeviceName.tt" />
+    <EmbeddedResource Include="General\Generated\NetworkDevice.snmp.xml">
+      <DependentUpon>NetworkDevice.tt</DependentUpon>
+    </EmbeddedResource>
+    <None Include="General\Generated\NetworkDevice.tt" />
+    <EmbeddedResource Include="General\Generated\NetworkInterface.snmp.xml">
+      <DependentUpon>NetworkInterface.tt</DependentUpon>
+    </EmbeddedResource>
+    <None Include="General\Generated\NetworkInterface.tt" />
+    <None Include="General\Generated\NetworkInterfaceCollection.tt" />
+    <None Include="General\Generated\PercentageValue.tt" />
+    <EmbeddedResource Include="General\Generated\SoftwarePackage.snmp.xml">
+      <DependentUpon>SoftwarePackage.tt</DependentUpon>
+    </EmbeddedResource>
+    <None Include="General\Generated\SoftwarePackage.tt" />
+    <None Include="General\Generated\SoftwarePackageCollection.tt" />
+    <EmbeddedResource Include="General\Generated\StorageDevice.snmp.xml">
+      <DependentUpon>StorageDevice.tt</DependentUpon>
+    </EmbeddedResource>
+    <None Include="General\Generated\StorageDevice.tt" />
+    <None Include="General\Generated\StorageDeviceCollection.tt" />
+    <None Include="General\Generated\StorageSize.tt" />
+    <None Include="General\Generated\Temperature.tt" />
+    <None Include="General\Generated\TimePeriod.tt" />
+    <None Include="General\Generated\Url.tt" />
+    <None Include="Resources\Source\CommandDetails.en-GB.txt" />
+    <None Include="Resources\Source\CommandDetails.txt" />
+    <None Include="Resources\Source\HealthDetails.en-GB.txt" />
+    <None Include="Resources\Source\HealthDetails.txt" />
+    <None Include="_Cisco\Definitions\Device.def" />
+    <None Include="_Cisco\Enums\AssociationAdditionalAlgorthimType.tt" />
+    <None Include="_Cisco\Enums\AssociationAlgorithmType.tt" />
+    <None Include="_Cisco\Enums\AssociationAuthenticationAlgorithm.tt" />
+    <None Include="_Cisco\Enums\AssociationCipherType.tt" />
+    <None Include="_Cisco\Enums\AssociationClassType.tt" />
+    <None Include="_Cisco\Enums\AssociationDeviceType.tt" />
+    <None Include="_Cisco\Enums\AssociationIpAddressType.tt" />
+    <None Include="_Cisco\Enums\AssociationKeyManagement.tt" />
+    <None Include="_Cisco\Enums\AssociationPowerSaveMode.tt" />
+    <None Include="_Cisco\Enums\AssociationRadioType.tt" />
+    <None Include="_Cisco\Enums\AssociationState.tt" />
+    <None Include="_Cisco\Enums\BridgeAddressStatus.tt" />
+    <None Include="_Cisco\Enums\ClientRole.tt" />
+    <None Include="_Cisco\Enums\ClientType.tt" />
+    <None Include="_Cisco\Enums\EnabledStatus.tt" />
+    <None Include="_Cisco\Enums\EnvironmentalMonitoringState.tt" />
+    <None Include="_Cisco\Enums\FrequencyUnits.tt" />
+    <None Include="_Cisco\Enums\HardwareType.tt" />
+    <None Include="_Cisco\Enums\InterfaceStatus.tt" />
+    <None Include="_Cisco\Enums\InterfaceType.tt" />
+    <None Include="_Cisco\Enums\IOSTrain.tt" />
+    <None Include="_Cisco\Enums\RadioInterfaceHtMode.tt" />
+    <None Include="_Cisco\Enums\RadioInterfacePhysicalType.tt" />
+    <None Include="_Cisco\Enums\RadioInterfaceRoleType.tt" />
+    <None Include="_Cisco\Enums\RadioMicAlgorithm.tt" />
+    <None Include="_Cisco\Enums\SecurityDot1xAuthStatus.tt" />
+    <None Include="_Cisco\Enums\SecurityDot1xMode.tt" />
+    <None Include="_Cisco\Enums\SecurityDot1xStatus.tt" />
+    <None Include="_Cisco\Enums\SecurityStatus.tt" />
+    <None Include="_Cisco\Enums\SecurityViolationAction.tt" />
+    <None Include="_Cisco\Enums\SensorScale.tt" />
+    <None Include="_Cisco\Enums\SensorStatus.tt" />
+    <None Include="_Cisco\Enums\SensorThresholdRelation.tt" />
+    <None Include="_Cisco\Enums\SensorThresholdSeverity.tt" />
+    <None Include="_Cisco\Enums\SensorUnits.tt" />
+    <None Include="_Cisco\Enums\VlanMembershipStatus.tt" />
+    <None Include="_Cisco\Enums\VlanMembershipType.tt" />
+    <None Include="_Cisco\Enums\VlanState.tt" />
+    <None Include="_Cisco\Enums\VlanType.tt" />
+    <None Include="_Cisco\Generated\AccessPoint.tt" />
+    <None Include="_Cisco\Generated\AccessPointInterface.tt" />
+    <None Include="_Cisco\Generated\AccessPointInterfaceCollection.tt" />
+    <None Include="_Cisco\Generated\BridgeForwardingAddress.tt" />
+    <None Include="_Cisco\Generated\BridgeForwardingAddressCollection.tt" />
+    <None Include="_Cisco\Generated\BridgePort.tt" />
+    <None Include="_Cisco\Generated\BridgePortCollection.tt" />
+    <None Include="_Cisco\Generated\CDPEntry.tt" />
+    <None Include="_Cisco\Generated\CDPEntryCollection.tt" />
+    <EmbeddedResource Include="Resources\Compiled\HealthDetails.en-GB.resources" />
+    <EmbeddedResource Include="Resources\Compiled\HealthDetails.resources" />
+    <EmbeddedResource Include="_Cisco\Generated\Cisco.AccessPoint.snmp.xml">
+      <DependentUpon>AccessPoint.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cisco\Generated\Cisco.AccessPointInterface.snmp.xml">
+      <DependentUpon>AccessPointInterface.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cisco\Generated\Cisco.BridgeForwardingAddress.snmp.xml">
+      <DependentUpon>BridgeForwardingAddress.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cisco\Generated\Cisco.BridgePort.snmp.xml">
+      <DependentUpon>BridgePort.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cisco\Generated\Cisco.CDPEntry.snmp.xml">
+      <DependentUpon>CDPEntry.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cisco\Generated\Cisco.ClientAssociation.snmp.xml">
+      <DependentUpon>ClientAssociation.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cisco\Generated\Cisco.Entity.snmp.xml">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cisco\Generated\Cisco.FanMonitor.snmp.xml">
+      <DependentUpon>FanMonitor.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cisco\Generated\Cisco.FrequencyBand.snmp.xml">
+      <DependentUpon>FrequencyBand.tt</DependentUpon>
+    </EmbeddedResource>
+    <None Include="_Cisco\Generated\Cisco.PowerMonitor.snmp.xml">
+      <DependentUpon>PowerMonitor.tt</DependentUpon>
+    </None>
+    <EmbeddedResource Include="_Cisco\Generated\Cisco.SensorThreshold.snmp.xml">
+      <DependentUpon>SensorThreshold.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cisco\Generated\Cisco.Ssid.snmp.xml">
+      <DependentUpon>Ssid.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cisco\Generated\Cisco.Switch.snmp.xml">
+      <DependentUpon>Switch.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cisco\Generated\Cisco.SwitchInterface.snmp.xml">
+      <DependentUpon>SwitchInterface.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cisco\Generated\Cisco.TemperatureMonitor.snmp.xml">
+      <DependentUpon>TemperatureMonitor.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cisco\Generated\Cisco.Vlan.snmp.xml">
+      <DependentUpon>Vlan.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cisco\Generated\Cisco.VoltageMonitor.snmp.xml">
+      <DependentUpon>VoltageMonitor.tt</DependentUpon>
+    </EmbeddedResource>
+    <None Include="_Cisco\Generated\ClientAssociation.tt" />
+    <None Include="_Cisco\Generated\ClientAssociationCollection.tt" />
+    <None Include="_Cisco\Generated\Entity.tt" />
+    <None Include="_Cisco\Generated\EntityCollection.tt" />
+    <None Include="_Cisco\Generated\FanMonitor.tt" />
+    <None Include="_Cisco\Generated\FanMonitorCollection.tt" />
+    <None Include="_Cisco\Generated\FrequencyBand.tt" />
+    <None Include="_Cisco\Generated\FrequencyBandCollection.tt" />
+    <None Include="_Cisco\Generated\IOSDetails.tt" />
+    <None Include="_Cisco\Generated\PoePower.tt" />
+    <None Include="_Cisco\Generated\PowerMonitor.tt" />
+    <None Include="_Cisco\Generated\PowerMonitorCollection.tt" />
+    <None Include="_Cisco\Generated\SensorThreshold.tt" />
+    <None Include="_Cisco\Generated\SensorThresholdCollection.tt" />
+    <None Include="_Cisco\Generated\Ssid.tt" />
+    <None Include="_Cisco\Generated\SsidCollection.tt" />
+    <None Include="_Cisco\Generated\Switch.tt" />
+    <None Include="_Cisco\Generated\SwitchInterface.tt" />
+    <None Include="_Cisco\Generated\SwitchInterfaceCollection.tt" />
+    <None Include="_Cisco\Generated\TemperatureMonitor.tt" />
+    <None Include="_Cisco\Generated\TemperatureMonitorCollection.tt" />
+    <None Include="_Cisco\Generated\Vlan.tt" />
+    <None Include="_Cisco\Generated\VlanCollection.tt" />
+    <None Include="_Cisco\Generated\VoltageMonitor.tt" />
+    <None Include="_Cisco\Generated\VoltageMonitorCollection.tt" />
+    <None Include="_Cisco\Generated\WirelessSpeeds.tt" />
+    <None Include="_Cisco\Voice\Enums\CiscoIPPhoneErrorCodes.tt" />
+    <None Include="_Cisco\Voice\Enums\CiscoIPPhoneInputItemFlags.tt" />
+    <None Include="_Cisco\Voice\Enums\CiscoIPPhoneSoftKeyURI.tt" />
+    <None Include="_Cisco\Voice\Generated\CiscoIPPhoneDirectory.tt" />
+    <None Include="_Cisco\Voice\Generated\CiscoIPPhoneDirectoryEntry.tt" />
+    <None Include="_Cisco\Voice\Generated\CiscoIPPhoneError.tt" />
+    <None Include="_Cisco\Voice\Generated\CiscoIPPhoneInput.tt" />
+    <None Include="_Cisco\Voice\Generated\CiscoIPPhoneInputItem.tt" />
+    <None Include="_Cisco\Voice\Generated\CiscoIPPhoneMenu.tt" />
+    <None Include="_Cisco\Voice\Generated\CiscoIPPhoneMenuItem.tt" />
+    <None Include="_Cisco\Voice\Generated\CiscoIPPhoneSoftKey.tt" />
+    <None Include="_Cisco\Voice\Generated\CiscoIPPhoneSoftKeyCollection.tt" />
+    <None Include="_Cisco\Voice\Generated\CiscoIPPhoneText.tt" />
+    <None Include="_Commands\Definitions\Command.def" />
+    <None Include="_Commands\Generated\CiscoCommands.tt" />
+    <None Include="_Commands\Generated\DirectoryCommands.tt" />
+    <None Include="_Commands\Generated\NetworkCommands.tt" />
+    <None Include="_Directories\Enums\AccountOptions.tt" />
+    <None Include="_Directories\Enums\AuthenticationType.tt" />
+    <None Include="_Directories\Enums\CommonActions.tt" />
+    <None Include="_Directories\Enums\CommonProperties.tt" />
+    <None Include="_Directories\Enums\CommonSchemas.tt" />
+    <None Include="_Directories\Enums\LoginResult.tt" />
+    <None Include="_Directories\Enums\ParameterComparator.tt" />
+    <None Include="_Directories\Enums\ParameterOperator.tt" />
+    <None Include="_Directories\Enums\SearchScope.tt" />
+    <None Include="_Directories\Exceptions\Generated\SearchException.tt" />
+    <None Include="_Directories\Exceptions\Generated\SecurityException.tt" />
+    <None Include="_Directories\Generated\AdConnection.tt" />
+    <None Include="_Directories\Generated\CorePrincipal.tt" />
+    <None Include="_Directories\Generated\Parameter.tt" />
+    <None Include="_Directories\Providers\Generated\AdPrincipleProvider.tt" />
+    <EmbeddedResource Include="_EMC\Generated\EMC.StorageArray.snmp.xml">
+      <DependentUpon>StorageArray.tt</DependentUpon>
+    </EmbeddedResource>
+    <None Include="_EMC\Generated\StorageArray.tt" />
+    <None Include="_Exterity\Definitions\TVGeneral.def" />
+    <None Include="_Exterity\Enums\DeviceType.tt" />
+    <None Include="_Exterity\Enums\DisplayType.tt" />
+    <None Include="_Exterity\Enums\InterfaceStatus.tt" />
+    <None Include="_Exterity\Enums\InterfaceType.tt" />
+    <None Include="_Exterity\Enums\LineDuplex.tt" />
+    <None Include="_Exterity\Enums\LineSpeed.tt">
+    </None>
+    <None Include="_Exterity\Enums\ProxyType.tt" />
+    <None Include="_Exterity\Enums\ServiceStatus.tt" />
+    <None Include="_Exterity\Enums\StreamType.tt" />
+    <None Include="_Exterity\Enums\TestStatus.tt" />
+    <None Include="_Exterity\Enums\VideoAspectType.tt" />
+    <None Include="_Exterity\Enums\VideoBitrateType.tt" />
+    <None Include="_Exterity\Enums\VideoFormatType.tt" />
+    <None Include="_Exterity\Enums\VideoInterfaceType.tt" />
+    <EmbeddedResource Include="_Exterity\Generated\Exterity.TVChannel.snmp.xml">
+      <DependentUpon>TVChannel.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Exterity\Generated\Exterity.TVDecoder.snmp.xml">
+      <DependentUpon>TVDecoder.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Exterity\Generated\Exterity.TVEncoder.snmp.xml">
+      <DependentUpon>TVEncoder.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Exterity\Generated\Exterity.TVGateway.snmp.xml">
+      <DependentUpon>TVGateway.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Exterity\Generated\Exterity.TVTuner.snmp.xml">
+      <DependentUpon>TVTuner.tt</DependentUpon>
+    </EmbeddedResource>
+    <None Include="_Exterity\Generated\TVChannel.tt" />
+    <None Include="_Exterity\Generated\TVChannelCollection.tt" />
+    <None Include="_Exterity\Generated\TVDecoder.tt" />
+    <None Include="_Exterity\Generated\TVEncoder.tt" />
+    <None Include="_Exterity\Generated\TVGateway.tt" />
+    <None Include="_Exterity\Generated\TVTuner.tt" />
+    <None Include="_Exterity\Generated\TVTunerCollection.tt" />
+    <None Include="_IBM\Enums\BladeState.tt" />
+    <None Include="_IBM\Enums\BlowerState.tt" />
+    <None Include="_IBM\Enums\PowerDomainPolicy.tt" />
+    <None Include="_IBM\Enums\PowerDomainState.tt" />
+    <None Include="_IBM\Enums\PowerSupplyState.tt" />
+    <None Include="_IBM\Enums\SwitchModuleState.tt" />
+    <None Include="_IBM\Generated\BladeCenter.tt" />
+    <None Include="_IBM\Generated\BladeServer.tt" />
+    <None Include="_IBM\Generated\BladeServerCollection.tt" />
+    <None Include="_IBM\Generated\Blower.tt" />
+    <EmbeddedResource Include="_IBM\Generated\IBM.BladeCenter.snmp.xml">
+      <DependentUpon>BladeCenter.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_IBM\Generated\IBM.BladeServer.snmp.xml">
+      <DependentUpon>BladeServer.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_IBM\Generated\IBM.PowerDomain.snmp.xml">
+      <DependentUpon>PowerDomain.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_IBM\Generated\IBM.PowerSupply.snmp.xml">
+      <DependentUpon>PowerSupply.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_IBM\Generated\IBM.SwitchModule.snmp.xml">
+      <DependentUpon>SwitchModule.tt</DependentUpon>
+    </EmbeddedResource>
+    <None Include="_IBM\Generated\Power.tt" />
+    <None Include="_IBM\Generated\PowerDomain.tt" />
+    <None Include="_IBM\Generated\PowerDomainCollection.tt" />
+    <None Include="_IBM\Generated\PowerState.tt" />
+    <None Include="_IBM\Generated\PowerSupply.tt" />
+    <None Include="_IBM\Generated\PowerSupplyCollection.tt" />
+    <None Include="_IBM\Generated\SwitchModule.tt" />
+    <None Include="_IBM\Generated\SwitchModuleCollection.tt" />
+    <None Include="_IBM\Generated\TemperatureSensor.tt" />
+    <None Include="_QNAP\Enums\HDStatus.tt" />
+    <None Include="_QNAP\Generated\Fan.tt" />
+    <None Include="_QNAP\Generated\FanCollection.tt" />
+    <None Include="_QNAP\Generated\HardDrive.tt" />
+    <None Include="_QNAP\Generated\HardDriveCollection.tt" />
+    <EmbeddedResource Include="_QNAP\Generated\QNAP.Fan.snmp.xml">
+      <DependentUpon>Fan.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_QNAP\Generated\QNAP.HardDrive.snmp.xml">
+      <DependentUpon>HardDrive.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_QNAP\Generated\QNAP.Volume.snmp.xml">
+      <DependentUpon>Volume.tt</DependentUpon>
+    </EmbeddedResource>
+    <None Include="_QNAP\Generated\StorageArray.tt" />
+    <None Include="_QNAP\Generated\Volume.tt" />
+    <None Include="_QNAP\Generated\VolumeCollection.tt" />
+    <None Include="_Snmp\Enums\SnmpDataType.tt" />
+    <None Include="_Snmp\Enums\SnmpDisplayVersion.tt" />
+    <None Include="_Snmp\Enums\SnmpErrorStatus.tt" />
+    <None Include="_Snmp\Enums\SnmpMessageType.tt" />
+    <None Include="_Snmp\Enums\SnmpVersion.tt" />
+    <None Include="_Snmp\Generated\FieldMapping.tt" />
+    <None Include="_Snmp\Generated\ObjectMapping.tt" />
+    <None Include="_Snmp\Generated\SnmpConnection.tt" />
+    <None Include="_Snmp\Generated\SnmpLengthedBase.tt" />
+    <None Include="_Snmp\Generated\SnmpProtocolDataUnitBase.tt" />
+    <None Include="_Snmp\Generated\SnmpVariableBind.tt" />
+    <None Include="_Snmp\Generated\TableMapping.tt" />
+    <None Include="_Snmp\v1\Generated\SnmpV1Message.tt" />
+    <None Include="_Snmp\v1\Generated\SnmpV1ProtocolDataUnit.tt" />
+    <None Include="_Snmp\v2c\Generated\SnmpV2cMessage.tt" />
+    <None Include="_Snmp\v2c\Generated\SnmpV2cMessageHeader.tt" />
+    <None Include="_Snmp\v2c\Generated\SnmpV2cProtocolDataUnit.tt" />
+    <Folder Include="Assembly" />
+    <Folder Include="General" />
+    <Folder Include="Resources\Compiled" />
+    <Folder Include="Resources\Source" />
+    <Compile Include="Assembly\AssemblyInfo.vb" />
+    <Compile Include="Enums\DeviceStatus.vb">
+      <DependentUpon>DeviceStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\DeviceType.vb">
+      <DependentUpon>DeviceType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\InterfaceStatus.vb">
+      <DependentUpon>InterfaceStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\InterfaceType.vb">
+      <DependentUpon>InterfaceType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\SoftwareType.vb">
+      <DependentUpon>SoftwareType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\StorageType.vb">
+      <DependentUpon>StorageType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\Computer.vb">
+      <DependentUpon>Computer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\DeltaCounter32.vb">
+      <DependentUpon>DeltaCounter32.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\GeneralDevice.vb">
+      <DependentUpon>GeneralDevice.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\GeneralDeviceCollection.vb">
+      <DependentUpon>GeneralDeviceCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\Health.vb">
+      <DependentUpon>Health.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\InterfaceName.vb">
+      <DependentUpon>InterfaceName.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\InterfaceSpeed.vb">
+      <DependentUpon>InterfaceSpeed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\NetworkDevice.vb">
+      <DependentUpon>NetworkDevice.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\NetworkInterface.vb">
+      <DependentUpon>NetworkInterface.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\NetworkInterfaceCollection.vb">
+      <DependentUpon>NetworkInterfaceCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\PercentageValue.vb">
+      <DependentUpon>PercentageValue.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\SoftwarePackage.vb">
+      <DependentUpon>SoftwarePackage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\SoftwarePackageCollection.vb">
+      <DependentUpon>SoftwarePackageCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\StorageDevice.vb">
+      <DependentUpon>StorageDevice.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\StorageDeviceCollection.vb">
+      <DependentUpon>StorageDeviceCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\StorageSize.vb">
+      <DependentUpon>StorageSize.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\Temperature.vb">
+      <DependentUpon>Temperature.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\TimePeriod.vb">
+      <DependentUpon>TimePeriod.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Partials\BerDecoder.vb" />
+    <Compile Include="General\Partials\BerEncoder.vb" />
+    <Compile Include="General\Partials\Computer.vb">
+    </Compile>
+    <Compile Include="General\Partials\GeneralDevice.vb" />
+    <Compile Include="General\Partials\Health.vb" />
+    <Compile Include="General\Partials\InterfaceName.vb" />
+    <Compile Include="General\Partials\Monitoring.vb" />
+    <Compile Include="General\Partials\InterfaceSpeed.vb" />
+    <Compile Include="General\Partials\NetworkDevice.vb" />
+    <Compile Include="General\Partials\NetworkInterface.vb" />
+    <Compile Include="General\Partials\PercentageValue.vb" />
+    <Compile Include="General\Partials\StorageDevice.vb" />
+    <Compile Include="General\Partials\StorageSize.vb" />
+    <Compile Include="General\Partials\Temperature.vb" />
+    <Compile Include="General\Partials\TextConstants.vb" />
+    <Compile Include="General\Partials\TimePeriod.vb" />
+    <Compile Include="Interfaces\IMonitorable.vb" />
+    <Compile Include="Resources\Resources.vb" />
+    <Compile Include="Testing\TemperatureTest.vb" />
+    <Compile Include="_Cisco\Enums\AssociationAdditionalAlgorthimType.vb">
+      <DependentUpon>AssociationAdditionalAlgorthimType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\AssociationAlgorithmType.vb">
+      <DependentUpon>AssociationAlgorithmType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\AssociationAuthenticationAlgorithm.vb">
+      <DependentUpon>AssociationAuthenticationAlgorithm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\AssociationCipherType.vb">
+      <DependentUpon>AssociationCipherType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\AssociationClassType.vb">
+      <DependentUpon>AssociationClassType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\AssociationDeviceType.vb">
+      <DependentUpon>AssociationDeviceType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\AssociationIpAddressType.vb">
+      <DependentUpon>AssociationIpAddressType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\AssociationKeyManagement.vb">
+      <DependentUpon>AssociationKeyManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\AssociationPowerSaveMode.vb">
+      <DependentUpon>AssociationPowerSaveMode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\AssociationRadioType.vb">
+      <DependentUpon>AssociationRadioType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\AssociationState.vb">
+      <DependentUpon>AssociationState.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\BridgeAddressStatus.vb">
+      <DependentUpon>BridgeAddressStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\ClientRole.vb">
+      <DependentUpon>ClientRole.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\ClientType.vb">
+      <DependentUpon>ClientType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\EnabledStatus.vb">
+      <DependentUpon>EnabledStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\EnvironmentalMonitoringState.vb">
+      <DependentUpon>EnvironmentalMonitoringState.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\FrequencyUnits.vb">
+      <DependentUpon>FrequencyUnits.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\HardwareType.vb">
+      <DependentUpon>HardwareType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\InterfaceStatus.vb">
+      <DependentUpon>InterfaceStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\InterfaceType.vb">
+      <DependentUpon>InterfaceType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\IOSTrain.vb">
+      <DependentUpon>IOSTrain.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\RadioInterfaceHtMode.vb">
+      <DependentUpon>RadioInterfaceHtMode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\RadioInterfacePhysicalType.vb">
+      <DependentUpon>RadioInterfacePhysicalType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\RadioInterfaceRoleType.vb">
+      <DependentUpon>RadioInterfaceRoleType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\RadioMicAlgorithm.vb">
+      <DependentUpon>RadioMicAlgorithm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\SecurityDot1xAuthStatus.vb">
+      <DependentUpon>SecurityDot1xAuthStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\SecurityDot1xMode.vb">
+      <DependentUpon>SecurityDot1xMode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\SecurityDot1xStatus.vb">
+      <DependentUpon>SecurityDot1xStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\SecurityStatus.vb">
+      <DependentUpon>SecurityStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\SecurityViolationAction.vb">
+      <DependentUpon>SecurityViolationAction.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\SensorScale.vb">
+      <DependentUpon>SensorScale.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\SensorStatus.vb">
+      <DependentUpon>SensorStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\SensorThresholdRelation.vb">
+      <DependentUpon>SensorThresholdRelation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\SensorThresholdSeverity.vb">
+      <DependentUpon>SensorThresholdSeverity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\SensorUnits.vb">
+      <DependentUpon>SensorUnits.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\VlanMembershipStatus.vb">
+      <DependentUpon>VlanMembershipStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\VlanMembershipType.vb">
+      <DependentUpon>VlanMembershipType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\VlanState.vb">
+      <DependentUpon>VlanState.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Enums\VlanType.vb">
+      <DependentUpon>VlanType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\AccessPoint.vb">
+      <DependentUpon>AccessPoint.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\AccessPointInterface.vb">
+      <DependentUpon>AccessPointInterface.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\AccessPointInterfaceCollection.vb">
+      <DependentUpon>AccessPointInterfaceCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\BridgeForwardingAddress.vb">
+      <DependentUpon>BridgeForwardingAddress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\BridgeForwardingAddressCollection.vb">
+      <DependentUpon>BridgeForwardingAddressCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\BridgePort.vb">
+      <DependentUpon>BridgePort.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\BridgePortCollection.vb">
+      <DependentUpon>BridgePortCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\CDPEntry.vb">
+      <DependentUpon>CDPEntry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\CDPEntryCollection.vb">
+      <DependentUpon>CDPEntryCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\ClientAssociation.vb">
+      <DependentUpon>ClientAssociation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\ClientAssociationCollection.vb">
+      <DependentUpon>ClientAssociationCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\Entity.vb">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\EntityCollection.vb">
+      <DependentUpon>EntityCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\FanMonitor.vb">
+      <DependentUpon>FanMonitor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\FanMonitorCollection.vb">
+      <DependentUpon>FanMonitorCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\FrequencyBand.vb">
+      <DependentUpon>FrequencyBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\FrequencyBandCollection.vb">
+      <DependentUpon>FrequencyBandCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\IOSDetails.vb">
+      <DependentUpon>IOSDetails.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\PoePower.vb">
+      <DependentUpon>PoePower.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\PowerMonitor.vb">
+      <DependentUpon>PowerMonitor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\PowerMonitorCollection.vb">
+      <DependentUpon>PowerMonitorCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\SensorThreshold.vb">
+      <DependentUpon>SensorThreshold.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\SensorThresholdCollection.vb">
+      <DependentUpon>SensorThresholdCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\Ssid.vb">
+      <DependentUpon>Ssid.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\SsidCollection.vb">
+      <DependentUpon>SsidCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\Switch.vb">
+      <DependentUpon>Switch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\SwitchInterface.vb">
+      <DependentUpon>SwitchInterface.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\SwitchInterfaceCollection.vb">
+      <DependentUpon>SwitchInterfaceCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\TemperatureMonitor.vb">
+      <DependentUpon>TemperatureMonitor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\TemperatureMonitorCollection.vb">
+      <DependentUpon>TemperatureMonitorCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\Vlan.vb">
+      <DependentUpon>Vlan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\VlanCollection.vb">
+      <DependentUpon>VlanCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\VoltageMonitor.vb">
+      <DependentUpon>VoltageMonitor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\VoltageMonitorCollection.vb">
+      <DependentUpon>VoltageMonitorCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Generated\WirelessSpeeds.vb">
+      <DependentUpon>WirelessSpeeds.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Partials\AccessPoint.vb" />
+    <Compile Include="_Cisco\Partials\AccessPointInterface.vb" />
+    <Compile Include="_Cisco\Partials\AccessPointInterfaceCollection.vb" />
+    <Compile Include="_Cisco\Partials\BridgeForwardingAddress.vb" />
+    <Compile Include="_Cisco\Partials\ClientAssocation.vb" />
+    <Compile Include="_Cisco\Partials\Entity.vb" />
+    <Compile Include="_Cisco\Partials\EntityCollection.vb" />
+    <Compile Include="_Cisco\Partials\FanMonitor.vb" />
+    <Compile Include="_Cisco\Partials\FanMonitorCollection.vb" />
+    <Compile Include="_Cisco\Partials\FrequencyBand.vb" />
+    <Compile Include="_Cisco\Partials\IOSDetails.vb" />
+    <Compile Include="_Cisco\Partials\PoePower.vb" />
+    <Compile Include="_Cisco\Partials\PowerMonitor.vb" />
+    <Compile Include="_Cisco\Partials\PowerMonitorCollection.vb" />
+    <Compile Include="_Cisco\Partials\SensorThreshold.vb" />
+    <Compile Include="_Cisco\Partials\SensorThresholdCollection.vb" />
+    <Compile Include="_Cisco\Partials\Ssid.vb" />
+    <Compile Include="_Cisco\Partials\Switch.vb" />
+    <Compile Include="_Cisco\Partials\SwitchInterfaceCollection.vb" />
+    <Compile Include="_Cisco\Partials\TemperatureMonitor.vb" />
+    <Compile Include="_Cisco\Partials\TemperatureMonitorCollection.vb" />
+    <Compile Include="_Cisco\Partials\Vlan.vb" />
+    <Compile Include="_Cisco\Partials\VlanCollection.vb" />
+    <Compile Include="_Cisco\Partials\VoltageMonitor.vb" />
+    <Compile Include="_Cisco\Partials\VoltageMonitorCollection.vb" />
+    <Compile Include="_Cisco\Partials\WirelessSpeeds.vb" />
+    <Compile Include="_Cisco\Testing\CiscoNetworkInterfaceTests.vb" />
+    <Compile Include="_Cisco\Testing\IOSDetailsTests.vb" />
+    <Compile Include="_Cisco\Voice\Enums\CiscoIPPhoneErrorCodes.vb">
+      <DependentUpon>CiscoIPPhoneErrorCodes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Voice\Enums\CiscoIPPhoneInputItemFlags.vb">
+      <DependentUpon>CiscoIPPhoneInputItemFlags.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Voice\Enums\CiscoIPPhoneSoftKeyURI.vb">
+      <DependentUpon>CiscoIPPhoneSoftKeyURI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Voice\Generated\CiscoIPPhoneDirectory.vb">
+      <DependentUpon>CiscoIPPhoneDirectory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Voice\Generated\CiscoIPPhoneDirectoryEntry.vb">
+      <DependentUpon>CiscoIPPhoneDirectoryEntry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Voice\Generated\CiscoIPPhoneError.vb">
+      <DependentUpon>CiscoIPPhoneError.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Voice\Generated\CiscoIPPhoneInput.vb">
+      <DependentUpon>CiscoIPPhoneInput.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Voice\Generated\CiscoIPPhoneInputItem.vb">
+      <DependentUpon>CiscoIPPhoneInputItem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Voice\Generated\CiscoIPPhoneMenu.vb">
+      <DependentUpon>CiscoIPPhoneMenu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Voice\Generated\CiscoIPPhoneMenuItem.vb">
+      <DependentUpon>CiscoIPPhoneMenuItem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Voice\Generated\CiscoIPPhoneSoftKey.vb">
+      <DependentUpon>CiscoIPPhoneSoftKey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Voice\Generated\CiscoIPPhoneSoftKeyCollection.vb">
+      <DependentUpon>CiscoIPPhoneSoftKeyCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Voice\Generated\CiscoIPPhoneText.vb">
+      <DependentUpon>CiscoIPPhoneText.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Cisco\Voice\Partials\CiscoIPPhoneDirectory.vb" />
+    <Compile Include="_Cisco\Voice\Partials\CiscoIPPhoneDirectoryEntry.vb" />
+    <Compile Include="_Cisco\Voice\Partials\CiscoIPPhoneError.vb" />
+    <Compile Include="_Cisco\Voice\Partials\CiscoIPPhoneInput.vb" />
+    <Compile Include="_Cisco\Voice\Partials\CiscoIPPhoneInputItem.vb" />
+    <Compile Include="_Cisco\Voice\Partials\CiscoIPPhoneMenu.vb" />
+    <Compile Include="_Cisco\Voice\Partials\CiscoIPPhoneMenuItem.vb" />
+    <Compile Include="_Cisco\Voice\Partials\CiscoIPPhoneSoftKey.vb" />
+    <Compile Include="_Cisco\Voice\Partials\CiscoIPPhoneSoftKeyCollection.vb" />
+    <Compile Include="_Cisco\Voice\Partials\CiscoIPPhoneText.vb" />
+    <Compile Include="_Commands\Generated\CiscoCommands.vb">
+      <DependentUpon>CiscoCommands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\DirectoryCommands.vb">
+      <DependentUpon>DirectoryCommands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\NetworkCommands.vb">
+      <DependentUpon>NetworkCommands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Partials\CiscoCommands.vb" />
+    <Compile Include="_Commands\Partials\DirectoryCommands.vb" />
+    <Compile Include="_Commands\Partials\NetworkCommands.vb" />
+    <Compile Include="_Directories\Entries\BaseDirectoryEntry.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Directories\Exceptions\Generated\SearchException.vb">
+      <DependentUpon>SearchException.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Directories\Exceptions\Generated\SecurityException.vb">
+      <DependentUpon>SecurityException.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Directories\Exceptions\Partials\SearchException.vb" />
+    <Compile Include="_Directories\Exceptions\Partials\SecurityException.vb" />
+    <Compile Include="_Directories\Generated\AdConnection.vb">
+      <DependentUpon>AdConnection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Directories\Generated\CorePrincipal.vb">
+      <DependentUpon>CorePrincipal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Directories\Generated\Parameter.vb">
+      <DependentUpon>Parameter.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Directories\Interfaces\IPrincipalProvider.vb" />
+    <Compile Include="_Directories\Partials\AdConnection.vb" />
+    <Compile Include="_Directories\Partials\CorePrincipal.vb" />
+    <Compile Include="_Directories\Partials\Parameter.vb" />
+    <Compile Include="_Directories\Partials\Searcher.vb" />
+    <Compile Include="_Directories\Providers\Generated\AdPrincipleProvider.vb">
+      <DependentUpon>AdPrincipleProvider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Directories\Providers\Partials\AdPrincipleProvider.vb" />
+    <Compile Include="_EMC\Generated\StorageArray.vb">
+      <DependentUpon>StorageArray.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_EMC\Partials\StorageArray.vb" />
+    <Compile Include="_Exterity\Enums\DeviceType.vb">
+      <DependentUpon>DeviceType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Enums\DisplayType.vb">
+      <DependentUpon>DisplayType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Enums\InterfaceStatus.vb">
+      <DependentUpon>InterfaceStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Enums\InterfaceType.vb">
+      <DependentUpon>InterfaceType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Enums\LineDuplex.vb">
+      <DependentUpon>LineDuplex.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Enums\LineSpeed.vb">
+      <DependentUpon>LineSpeed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Enums\ProxyType.vb">
+      <DependentUpon>ProxyType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Enums\ServiceStatus.vb">
+      <DependentUpon>ServiceStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Enums\StreamType.vb">
+      <DependentUpon>StreamType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Enums\TestStatus.vb">
+      <DependentUpon>TestStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Enums\VideoAspectType.vb">
+      <DependentUpon>VideoAspectType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Enums\VideoBitrateType.vb">
+      <DependentUpon>VideoBitrateType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Enums\VideoFormatType.vb">
+      <DependentUpon>VideoFormatType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Enums\VideoInterfaceType.vb">
+      <DependentUpon>VideoInterfaceType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Generated\TVChannel.vb">
+      <DependentUpon>TVChannel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Generated\TVChannelCollection.vb">
+      <DependentUpon>TVChannelCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Generated\TVDecoder.vb">
+      <DependentUpon>TVDecoder.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Generated\TVEncoder.vb">
+      <DependentUpon>TVEncoder.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Generated\TVGateway.vb">
+      <DependentUpon>TVGateway.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Generated\TVTuner.vb">
+      <DependentUpon>TVTuner.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Generated\TVTunerCollection.vb">
+      <DependentUpon>TVTunerCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Exterity\Partials\TVDecoder.vb" />
+    <Compile Include="_Exterity\Partials\TVEncoder.vb" />
+    <Compile Include="_Exterity\Partials\TVGateway.vb" />
+    <Compile Include="_IBM\Enums\BladeState.vb">
+      <DependentUpon>BladeState.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Enums\BlowerState.vb">
+      <DependentUpon>BlowerState.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Enums\PowerDomainPolicy.vb">
+      <DependentUpon>PowerDomainPolicy.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Enums\PowerDomainState.vb">
+      <DependentUpon>PowerDomainState.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Enums\PowerSupplyState.vb">
+      <DependentUpon>PowerSupplyState.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Enums\SwitchModuleState.vb">
+      <DependentUpon>SwitchModuleState.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Generated\BladeCenter.vb">
+      <DependentUpon>BladeCenter.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Generated\BladeServer.vb">
+      <DependentUpon>BladeServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Generated\BladeServerCollection.vb">
+      <DependentUpon>BladeServerCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Generated\Blower.vb">
+      <DependentUpon>Blower.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Generated\Power.vb">
+      <DependentUpon>Power.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Generated\PowerDomain.vb">
+      <DependentUpon>PowerDomain.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Generated\PowerDomainCollection.vb">
+      <DependentUpon>PowerDomainCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Generated\PowerState.vb">
+      <DependentUpon>PowerState.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Generated\PowerSupply.vb">
+      <DependentUpon>PowerSupply.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Generated\PowerSupplyCollection.vb">
+      <DependentUpon>PowerSupplyCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Generated\SwitchModule.vb">
+      <DependentUpon>SwitchModule.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Generated\SwitchModuleCollection.vb">
+      <DependentUpon>SwitchModuleCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Generated\TemperatureSensor.vb">
+      <DependentUpon>TemperatureSensor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_IBM\Partials\BladeCenter.vb" />
+    <Compile Include="_IBM\Partials\BladeServer.vb" />
+    <Compile Include="_IBM\Partials\Blower.vb" />
+    <Compile Include="_IBM\Partials\Power.vb" />
+    <Compile Include="_IBM\Partials\PowerDomain.vb" />
+    <Compile Include="_IBM\Partials\PowerState.vb" />
+    <Compile Include="_IBM\Partials\PowerSupply.vb" />
+    <Compile Include="_IBM\Partials\SwitchModule.vb" />
+    <Compile Include="_IBM\Partials\TemperatureSensor.vb" />
+    <Compile Include="_QNAP\Enums\HDStatus.vb">
+      <DependentUpon>HDStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_QNAP\Generated\Fan.vb">
+      <DependentUpon>Fan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_QNAP\Generated\FanCollection.vb">
+      <DependentUpon>FanCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_QNAP\Generated\HardDrive.vb">
+      <DependentUpon>HardDrive.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_QNAP\Generated\HardDriveCollection.vb">
+      <DependentUpon>HardDriveCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_QNAP\Generated\StorageArray.vb">
+      <DependentUpon>StorageArray.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="_QNAP\Generated\QNAP.StorageArray.snmp.xml">
+      <DependentUpon>StorageArray.tt</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="_QNAP\Generated\Volume.vb">
+      <DependentUpon>Volume.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_QNAP\Generated\VolumeCollection.vb">
+      <DependentUpon>VolumeCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_QNAP\Partials\HardDrive.vb" />
+    <Compile Include="_QNAP\Partials\HardDriveCollection.vb" />
+    <Compile Include="_QNAP\Partials\StorageArray.vb" />
+    <Compile Include="_QNAP\Partials\Volume.vb" />
+    <Compile Include="_QNAP\Partials\VolumeCollection.vb" />
+    <Compile Include="_Snmp\Enums\SnmpDisplayVersion.vb">
+      <DependentUpon>SnmpDisplayVersion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\Generated\FieldMapping.vb">
+      <DependentUpon>FieldMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\Generated\ObjectMapping.vb">
+      <DependentUpon>ObjectMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\Generated\SnmpConnection.vb">
+      <DependentUpon>SnmpConnection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\Generated\SnmpLengthedBase.vb">
+      <DependentUpon>SnmpLengthedBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\Generated\SnmpProtocolDataUnitBase.vb">
+      <DependentUpon>SnmpProtocolDataUnitBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\Generated\SnmpVariableBind.vb">
+      <DependentUpon>SnmpVariableBind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\Generated\TableMapping.vb">
+      <DependentUpon>TableMapping.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\Interfaces\IPacketDecoder.vb" />
+    <Compile Include="_Snmp\Interfaces\IPacketEncoder.vb" />
+    <Compile Include="_Snmp\Interfaces\ISnmpManageable.vb" />
+    <Compile Include="_Snmp\Partials\ObjectMapping.vb" />
+    <Compile Include="_Snmp\Partials\SnmpConnection.vb" />
+    <Compile Include="_Snmp\Partials\SnmpLengthedBase.vb" />
+    <Compile Include="_Snmp\Partials\SnmpProtocolDataUnitBase.vb" />
+    <Compile Include="_Snmp\Partials\SnmpVariableBind.vb" />
+    <Compile Include="_Snmp\v1\Generated\SnmpV1Message.vb">
+      <DependentUpon>SnmpV1Message.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\v1\Generated\SnmpV1ProtocolDataUnit.vb">
+      <DependentUpon>SnmpV1ProtocolDataUnit.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\v1\Partials\SnmpV1Message.vb" />
+    <Compile Include="_Snmp\v1\Partials\SnmpV1ProtocolDataUnit.vb" />
+    <Compile Include="_Snmp\v2c\Generated\SnmpV2cMessage.vb">
+      <DependentUpon>SnmpV2cMessage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\v2c\Generated\SnmpV2cMessageHeader.vb">
+      <DependentUpon>SnmpV2cMessageHeader.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\v2c\Generated\SnmpV2cProtocolDataUnit.vb">
+      <DependentUpon>SnmpV2cProtocolDataUnit.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\v2c\Partials\SnmpV2cMessage.vb" />
+    <Compile Include="_Snmp\v2c\Partials\SnmpV2cMessageHeader.vb" />
+    <Compile Include="_Snmp\v2c\Partials\SnmpV2cProtocolDataUnit.vb" />
+    <EmbeddedResource Include="Resources\Compiled\CommandDetails.en-GB.resources" />
+    <EmbeddedResource Include="Resources\Compiled\CommandDetails.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="_Directories\Constants\DirectoryConstants.vb" />
+    <Compile Include="_Directories\Entries\AccountDirectoryEntry.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Directories\Entries\ComputerDirectoryEntry.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Directories\Entries\GroupDirectoryEntry.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Directories\Entries\ReadOnlyStrongDirectoryEntryBase.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Directories\Entries\UserDirectoryEntry.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Directories\Enums\AccountOptions.vb">
+      <DependentUpon>AccountOptions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Directories\Enums\AuthenticationType.vb">
+      <DependentUpon>AuthenticationType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Directories\Enums\CommonActions.vb">
+      <DependentUpon>CommonActions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Directories\Enums\CommonProperties.vb">
+      <DependentUpon>CommonProperties.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Directories\Enums\CommonSchemas.vb">
+      <DependentUpon>CommonSchemas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Directories\Enums\LoginResult.vb">
+      <DependentUpon>LoginResult.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Directories\Enums\ParameterComparator.vb">
+      <DependentUpon>ParameterComparator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Directories\Enums\ParameterOperator.vb">
+      <DependentUpon>ParameterOperator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Directories\Enums\SearchScope.vb">
+      <DependentUpon>SearchScope.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Directories\Interfaces\IConnection.vb" />
+    <Compile Include="Enums\HealthStatus.vb">
+      <DependentUpon>HealthStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\Location.vb">
+      <DependentUpon>Location.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\DeviceName.vb">
+      <DependentUpon>DeviceName.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Generated\Url.vb">
+      <DependentUpon>Url.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Partials\DeltaCounter32.vb" />
+    <Compile Include="General\Partials\Location.vb" />
+    <Compile Include="General\Partials\DeviceName.vb" />
+    <Compile Include="_Snmp\Enums\SnmpDataType.vb">
+      <DependentUpon>SnmpDataType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\Enums\SnmpErrorStatus.vb">
+      <DependentUpon>SnmpErrorStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\Enums\SnmpMessageType.vb">
+      <DependentUpon>SnmpMessageType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\Enums\SnmpVersion.vb">
+      <DependentUpon>SnmpVersion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Snmp\Interfaces\ISnmpMessage.vb" />
+    <Compile Include="Testing\SnmpV2CTest.vb" />
+    <Compile Include="General\Partials\Url.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+    <Folder Include="General\Definitions" />
+    <Folder Include="Interfaces" />
+    <Folder Include="_Commands" />
+    <Folder Include="_Commands\Definitions" />
+    <Folder Include="_Commands\Generated" />
+    <Folder Include="_Commands\Partials" />
+    <Folder Include="_EMC" />
+    <Folder Include="_Cisco" />
+    <Folder Include="_Cisco\Definitions" />
+    <Folder Include="_Cisco\Enums" />
+    <Folder Include="_Cisco\Generated" />
+    <Folder Include="_Cisco\Partials" />
+    <Folder Include="_Cisco\Testing" />
+    <Folder Include="_Cisco\Voice" />
+    <Folder Include="_Cisco\Voice\Enums" />
+    <Folder Include="_Cisco\Voice\Generated" />
+    <Folder Include="_Cisco\Voice\Partials" />
+    <Folder Include="_Directories\Exceptions\Generated" />
+    <Folder Include="_Directories\Exceptions\Partials" />
+    <Folder Include="_Directories\Providers" />
+    <Folder Include="_Directories\Providers\Generated" />
+    <Folder Include="_Directories\Providers\Partials" />
+    <Folder Include="_EMC\Generated" />
+    <Folder Include="_EMC\Partials" />
+    <Folder Include="_Exterity" />
+    <Folder Include="_Exterity\Definitions" />
+    <Folder Include="_Exterity\Enums" />
+    <Folder Include="_Exterity\Generated" />
+    <Folder Include="_Exterity\Partials" />
+    <Folder Include="_IBM" />
+    <Folder Include="_IBM\Enums" />
+    <Folder Include="_IBM\Generated" />
+    <Folder Include="_IBM\Partials" />
+    <Folder Include="_QNAP\Enums" />
+    <Folder Include="_Snmp\Generated" />
+    <Folder Include="_Snmp\Partials" />
+    <Folder Include="_Snmp\v1\Generated" />
+    <Folder Include="_Snmp\v1\Partials" />
+    <Folder Include="_Snmp\v2c\Generated" />
+    <Folder Include="_Snmp\v2c\Partials" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Leviathan.Commands" />
+    <Import Include="Leviathan.Comparison.Comparer" />
+    <Import Include="Leviathan.Configuration" />
+    <Import Include="Leviathan.Inspection" />
+    <Import Include="Leviathan.Inspection.TypeAnalyser" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.DirectoryServices" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Management" />
+    <Import Include="System.Net" />
+    <Import Include="System.Net.NetworkInformation" />
+    <Import Include="System.Net.Sockets" />
+    <Import Include="Caerus.TextConstants" />
+    <Import Include="Caerus.Resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildTasksPath)\MSBuild.Community.Tasks.Targets" />
+  <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'Debug' ">
+    <NUnit WorkingDirectory="$(MSBuildProjectDirectory)" Assemblies="$(TargetDir)$(TargetFileName)" ContinueOnError="false" OutputXmlFile="$(TargetDir)$(TargetName)-results.xml" ToolPath="$(NUnitToolPath)" DisableShadowCopy="true" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>$(SolutionDir)\Generate-Resources.bat $(ProjectDir)Resources\Source $(ProjectDir)Resources\Compiled en-GB</PreBuildEvent>
+    <!-- <PreBuildEvent>$(ProjectDir)..\Shared-Batch-Files\Generate-Resources-2010.bat $(ProjectDir)Resources\Source $(ProjectDir)Resources\Compiled en-GB</PreBuildEvent> -->
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,11 @@
+﻿<# Add_Class(a:="Cisco", d:="Vlan") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Index") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Name}") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Behaviour(n:="Snmp") #>
+<# Add_Field(n:="Index", t:="System.Int32", d:="The VLAN-id of this VLAN on ISL or 802.1q trunks.") #>
+<# Add_Field(n:="Name", t:="System.String", m:="Snmp:1.3.6.1.4.1.9.9.46.1.3.1.1.4.1.{Index}", d:="Url of the Item") #>
+<# Add_Field(n:="State", t:="VlanState", m:="Snmp:1.3.6.1.4.1.9.9.46.1.3.1.1.2.1.{Index}", d:="The state of this VLAN.") #>
+<# Add_Field(n:="Type", t:="VlanType", m:="Snmp:1.3.6.1.4.1.9.9.46.1.3.1.1.3.1.{Index}", d:="The type of this VLAN.") #>
+<# Add_Field(n:="InterfaceIndex", t:="System.Int32", m:="Snmp:1.3.6.1.4.1.9.9.46.1.3.1.1.18.1.{Index}", d:="The value of the ifIndex corresponding to this VLAN ID. If the VLAN ID does not have its corresponding interface, this object has the value of zero.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

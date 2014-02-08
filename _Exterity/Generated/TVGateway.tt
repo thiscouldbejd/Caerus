@@ -1,0 +1,8 @@
+﻿<# Add_Class(a:="Exterity", d:="Class Representing an Exterity TV Gateway") #>
+<#@ include file="..\Definitions\TVGeneral.def" #>
+<# Add_Field(n:="ServerStopped", t:="System.Boolean", m:="Snmp:1.3.6.1.4.1.38072.4.5.0", d:="Setting this to True Stops the server. Reads back as True if server is stopped") #>
+<# Add_Field(n:="ServerStarted", t:="System.Boolean", m:="Snmp:1.3.6.1.4.1.38072.4.6.0", d:="Setting this to True Starts the server. Reads back as True if server is started.") #>
+<# Add_Field(n:="DefaultMulticastPort", t:="System.Int32", m:="Snmp:1.3.6.1.4.1.38072.4.7.0", d:="This is the port number to which all new streams will be sent. Setting this will affect service.") #>
+<# Add_Field(n:="BoardTemperature", t:="Temperature", m:="Snmp:1.3.6.1.4.1.38072.4.9.0|Snmp_Field:{0}.Value", d:="The temperature of the board in degrees C.", f:="NEW") #>
+<# Add_Field(n:="Cards", t:="TvTunerCollection", m:="Snmp:1.3.6.1.4.1.38072.4.8.1.1.#|Snmp_Field:Index", d:="Tuner Cards for this TV gateway.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

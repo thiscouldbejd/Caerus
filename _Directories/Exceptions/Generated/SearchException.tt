@@ -1,0 +1,2 @@
+﻿<# Add_Class(a:="Directories", i:="Exception", d:="Exception that is thrown when an error occurs whilst searching") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

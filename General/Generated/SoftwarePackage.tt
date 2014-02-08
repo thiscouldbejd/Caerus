@@ -1,0 +1,10 @@
+﻿<# Add_Class(d:="Software Package") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Installed") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Values:{Name}") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Behaviour(n:="Snmp") #>
+<# Add_Field(n:="Index", t:="System.Int32", d:="A unique value for each piece of software installed on the host. This value shall be in the range from 1 to the number of pieces of software installed on the host.") #>
+<# Add_Field(n:="Name", t:="System.String", m:="Snmp:1.3.6.1.2.1.25.6.3.1.2.{Index}", d:="The name of this software.") #>
+<# Add_Field(n:="Type", t:="SoftwareType", m:="Snmp:1.3.6.1.2.1.25.6.3.1.4.{Index}", d:="The type of this software.") #>
+<# Add_Field(n:="Installed", t:="System.DateTime", m:="Snmp:1.3.6.1.2.1.25.6.3.1.5.{Index}", d:="The last-modification date of this application as it would appear in a directory listing.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

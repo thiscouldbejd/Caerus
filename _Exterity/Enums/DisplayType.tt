@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Exterity", d:="Enum Representing Exterity Display Type") #>
+<# Add_Enum(n:="TV", t:="System.Int64", d:="Display Type is TV", v:=0) #>
+<# Add_Enum(n:="Browser", d:="Display Type is Browser", v:=1) #>
+<# Add_Enum(n:="Splash", d:="Display Type is Splash", v:=2) #>
+<# Add_Enum(n:="Playlist", d:="Display Type is Playlist", v:=3) #>
+<# Add_Enum(n:="Off", d:="Display Type is Off", v:=4) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

@@ -1,0 +1,9 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="NONE", t:="System.Int64", v:=0) #>
+<# Add_Enum(n:="ETHERNET", v:=1) #>
+<# Add_Enum(n:="FDDI", v:=2) #>
+<# Add_Enum(n:="TOKENRING", v:=3) #>
+<# Add_Enum(n:="FDDINET", v:=4) #>
+<# Add_Enum(n:="TRNET", v:=5) #>
+<# Add_Enum(n:="DEPRECATED", v:=6) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

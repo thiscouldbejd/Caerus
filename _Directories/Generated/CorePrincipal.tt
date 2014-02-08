@@ -1,0 +1,8 @@
+<# Add_Class(a:="Directories", d:="This Class Effectively wraps an IIdentity Object with a Display Name and Custom Roles/Groups") #>
+<# Add_Behaviour(n:="Settable") #>
+<# Add_Field(n:="Identity", a:="R", t:="System.Security.Principal.IIdentity", i:="System.Security.Principal.IPrincipal.Identity", d:="IIdentity Object that the Core Principal is wrapping") #>
+<# Add_Field(n:="Roles", t:="ArrayList", a:="", f:="NEW", d:="Custom List of Roles") #>
+<# Add_Field(n:="DisplayName", t:="System.String", d:="Display Name of the Core Principal") #>
+<# Add_Field(n:="EmailAddress", t:="System.String", d:="Email Address of the Core Principal") #>
+<# Add_Field(n:="Id", t:="System.Guid", d:="Id of the Core Principal") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

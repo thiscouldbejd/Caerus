@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="MAC", t:="System.Int64", b:=True, d:="MAC address authentication", v:=128) #>
+<# Add_Enum(n:="EAP", d:="EAP authentication", v:=64) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

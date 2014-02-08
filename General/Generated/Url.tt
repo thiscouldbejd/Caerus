@@ -1,0 +1,7 @@
+﻿<# Add_Class(d:="Location Information for an Entity") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Field(n:="BaseUrl", t:="System.String") #>
+<# Add_Field(n:="RelativeUrl", t:="System.String") #>
+<# Add_Field(n:="Bookmark", t:="System.String") #>
+<# Add_Field(n:="Queries", t:="System.Collections.Hashtable", f:="NEW") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

@@ -1,0 +1,4 @@
+﻿<# Add_Class(d:="Network Device") #>
+<#@ include file="..\Definitions\NetworkDevice.def" #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Values:{Name.Fqdn}") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

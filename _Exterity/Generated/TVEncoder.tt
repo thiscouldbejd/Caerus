@@ -1,0 +1,20 @@
+﻿<# Add_Class(a:="Exterity", d:="Class Representing an Exterity TV Encoder") #>
+<#@ include file="..\Definitions\TVGeneral.def" #>
+<# Add_Field(n:="MulticastAddress", t:="System.Net.IPAddress", m:="Snmp:1.3.6.1.4.1.38072.3.4.0", d:=" The Multicast Address this encoder transmits on.") #>
+<# Add_Field(n:="AudioPort", t:="System.Int32", m:="Snmp:1.3.6.1.4.1.38072.3.5.0", d:="The UDP port that the audio stream is sent to.") #>
+<# Add_Field(n:="VideoPort", t:="System.Int32", m:="Snmp:1.3.6.1.4.1.38072.3.6.0", d:="The UDP port that the video stream is sent to.") #>
+<# Add_Field(n:="VideoFormat", t:="VideoFormatType", m:="Snmp:1.3.6.1.4.1.38072.3.11.0", d:="Which flavour of video are we using PAL (0), NTSC (1), SECAM(2), Black and white (3).") #>
+<# Add_Field(n:="VideoInterface", t:="VideoInterfaceType", m:="Snmp:1.3.6.1.4.1.38072.3.12.0", d:="Are we receiving  Composite(0), RGB(1) or S-Video(2).") #>
+<# Add_Field(n:="VideoAspect", t:="VideoAspectType", m:="Snmp:1.3.6.1.4.1.38072.3.13.0", d:="Are we in wide screen (16:9)(2), normal (4:3)(1)or just off(0).") #>
+<# Add_Field(n:="VideoBitrate", t:="VideoBitrateType", m:="Snmp:1.3.6.1.4.1.38072.3.14.0", d:="Are we in variable bitrate mode (1) or constant bitrate mode (0).") #>
+<# Add_Field(n:="Bitrate", t:="System.Int32", m:="Snmp:1.3.6.1.4.1.38072.3.15.0", d:="What is the bitrate of the stream (max bitrate if VBR).") #>
+<# Add_Field(n:="IRClient", t:="System.Net.IPAddress", m:="Snmp:1.3.6.1.4.1.38072.3.19.0", d:="Except when there is a Master IR Client defined this is the the client (Decoder) which has control over the encoder i.e. when IR commands are received from this client (stop, play, pause) it is these IR commands that the encoder uses to control the attached device.  All other commands are ignored from other attached devices.  In the event multiple Clients are attached the Current IR client is always  the first attached device.  In the event that this client issues a tear down the next client which attached will become the Current IR Client.") #>
+<# Add_Field(n:="MasterIRClient", t:="System.Net.IPAddress", m:="Snmp:1.3.6.1.4.1.38072.3.20.0", d:="If this is configured then the encoder will always exclusively follow the instructions from the Master IR Client for example this might be the PC on which the iSocket Manager software is installed.") #>
+<# Add_Field(n:="IRTest", t:="TestStatus", m:="Snmp:1.3.6.1.4.1.38072.3.21.0", d:="The status of the last IR test performed. 0 is no test performed, 1 is test passed -1 is test failed.") #>
+<# Add_Field(n:="ChannelNumber", t:="System.Int32", m:="Snmp:1.3.6.1.4.1.38072.3.22.0", d:="Channel number assigned to this encoder.") #>
+<# Add_Field(n:="Groups", t:="System.String", m:="Snmp:1.3.6.1.4.1.38072.3.23.0", d:="This encoder is a member of the groups held in this field.") #>
+<# Add_Field(n:="MulticastTTL", t:="System.Int32", m:="Snmp:1.3.6.1.4.1.38072.3.24.0", d:="The IP TTL in the multicast stream.") #>
+<# Add_Field(n:="SuppressSAP", t:="System.Boolean", m:="Snmp:1.3.6.1.4.1.38072.3.25.0", d:="Turns SAP announcements on(0) or off(1).") #>
+<# Add_Field(n:="AnnouncementFormat", t:="System.String", m:="Snmp:1.3.6.1.4.1.38072.3.26.0", d:="Set the announce format to UDP/RTSP/SDP.") #>
+<# Add_Field(n:="SuppressAudio", t:="System.Boolean", m:="Snmp:1.3.6.1.4.1.38072.3.27.0", d:="Turns audio on (0) or off (1). If not specified assume to be on.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

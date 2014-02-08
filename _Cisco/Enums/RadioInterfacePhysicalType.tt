@@ -1,0 +1,10 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="UNKNOWN", t:="System.Int64", v:=0, d:="Unknown or Uninitialised") #>
+<# Add_Enum(n:="FHSS", v:=1, d:="Frequency Hopping, Spread Spectrum") #>
+<# Add_Enum(n:="DSSS", v:=2, d:="Direct Sequence Spread Spectrum") #>
+<# Add_Enum(n:="IR_BASEBAND", v:=3, d:="Infrared Baseband") #>
+<# Add_Enum(n:="OFDM", v:=4, d:="Othogonal Frequency Division Multiplexing 802.11a") #>
+<# Add_Enum(n:="HRDSSS", v:=5, d:="High Rate DSSS 802.11b") #>
+<# Add_Enum(n:="ERP", v:=6, d:="Extended Rate 802.11g") #>
+<# Add_Enum(n:="HT", v:=7, d:="High Throughput 802.11n") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

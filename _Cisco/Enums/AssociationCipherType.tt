@@ -1,0 +1,8 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="CKIP", t:="System.Int64", b:=True, d:="Cisco Per packet key hashing", v:=128) #>
+<# Add_Enum(n:="CMIC", d:="Cisco MMH MIC", v:=64) #>
+<# Add_Enum(n:="TKIP", d:="WPA Temporal Key encryption", v:=32) #>
+<# Add_Enum(n:="WEP40", d:="40-bit WEP key", v:=16) #>
+<# Add_Enum(n:="WEP128", d:="128-bit WEP key", v:=8) #>
+<# Add_Enum(n:="AESCCM", d:="WPA AES CCMP encryption", v:=4) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

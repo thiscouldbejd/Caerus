@@ -1,0 +1,15 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="PC3500", t:="System.Int64", v:=3) #>
+<# Add_Enum(n:="PC3000", v:=4) #>
+<# Add_Enum(n:="PC4500", v:=6) #>
+<# Add_Enum(n:="PC4800", v:=12) #>
+<# Add_Enum(n:="PC3100", v:=13) #>
+<# Add_Enum(n:="Series340", v:=33) #>
+<# Add_Enum(n:="Series350", v:=34) #>
+<# Add_Enum(n:="Series370", v:=35) #>
+<# Add_Enum(n:="Bridge1410", v:=36) #>
+<# Add_Enum(n:="MP2xSeries", v:=37) #>
+<# Add_Enum(n:="RM2xSeries", v:=38) #>
+<# Add_Enum(n:="RM2gSeries", v:=39) #>
+<# Add_Enum(n:="MP2xMAR", v:=40) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

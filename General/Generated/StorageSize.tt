@@ -1,0 +1,3 @@
+﻿<# Add_Class(d:="The Size of a Storage Device") #>
+<# Add_Field(n:="Value", t:="System.Int64", d:="The Size in Bytes") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

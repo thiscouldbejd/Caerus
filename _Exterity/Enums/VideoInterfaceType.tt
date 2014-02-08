@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Exterity", d:="Enum Representing Exterity Video Interface Type") #>
+<# Add_Enum(n:="Composite", t:="System.Int64", d:="Type is Composite", v:=0) #>
+<# Add_Enum(n:="RGB", d:="Type is RBG", v:=1) #>
+<# Add_Enum(n:="SVideo", d:="Type is S-Video", v:=2) #>
+<# Add_Enum(n:="PbPr", d:="Type is Pb-Pr", v:=3) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

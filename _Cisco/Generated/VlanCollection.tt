@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Cisco", i:="Leviathan.Collections.GeneralCollection") #>
+<# Add_Behaviour(n:="Collection", p:="Cl_Name:Vlans|Cl_ElementType:Vlan") #>
+<# Add_Field(n:="Name", t:="System.String", f:="Vlans") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

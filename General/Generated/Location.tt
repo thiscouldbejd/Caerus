@@ -1,0 +1,8 @@
+﻿<# Add_Class(d:="Location Information for an Entity") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Field(n:="Organisation", t:="System.String", d:="The Organisation in which the Entity is Located") #>
+<# Add_Field(n:="Site", t:="System.String", d:="The Site in which the Entity is Located") #>
+<# Add_Field(n:="Block", t:="System.String", d:="The Block in which the Entity is Located") #>
+<# Add_Field(n:="Room", t:="System.String", d:="The Room in which the Entity is Located") #>
+<# Add_Field(n:="Area", t:="System.String", d:="The Area in which the Entity is Located") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

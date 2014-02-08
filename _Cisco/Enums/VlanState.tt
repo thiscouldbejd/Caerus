@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="NONE", t:="System.Int64", v:=0) #>
+<# Add_Enum(n:="OPERATIONAL", v:=1) #>
+<# Add_Enum(n:="SUSPENDED", v:=2) #>
+<# Add_Enum(n:="MTU_TOO_BIG_FOR_DEVICE", v:=3) #>
+<# Add_Enum(n:="MTU_TOO_BIG_FOR_TRUNK", v:=4) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

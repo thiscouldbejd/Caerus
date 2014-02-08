@@ -1,0 +1,9 @@
+﻿<# Add_Class(a:="QNAP", d:="Class Representing a Fan in a QNAP Storage System") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Index") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Description} ({Speed})") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Behaviour(n:="Snmp") #>
+<# Add_Field(n:="Index", t:="System.Int32", d:="The index for the fan in the table.") #>
+<# Add_Field(n:="Description", t:="System.String", m:="Snmp:1.3.6.1.4.1.24681.1.2.15.1.2.{Index}", d:="The Description of the Fan.") #>
+<# Add_Field(n:="Speed", t:="System.String", m:="Snmp:1.3.6.1.4.1.24681.1.2.15.1.3.{Index}", d:="The Speed of the Fan.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

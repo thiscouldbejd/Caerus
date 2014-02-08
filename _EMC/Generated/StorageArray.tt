@@ -1,0 +1,21 @@
+﻿<# Add_Class(a:="EMC", d:="Storage Array Device") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Name") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Name}") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Behaviour(n:="Snmp") #>
+<# Add_Behaviour(n:="SnmpManageable") #>
+<# Add_Field(n:="Name", t:="DeviceName", m:="Snmp:1.3.6.1.2.1.1.5.0", d:="The Name of the network device.") #>
+<# Add_Field(n:="SnmpCommunity", t:="System.String", d:="The Snmp Community of the Device.") #>
+<# Add_Field(n:="Description", t:="System.String", m:="Snmp:1.3.6.1.2.1.1.1.0", d:="A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software. It is mandatory that this only contain printable ASCII characters.") #>
+<# Add_Field(n:="UpTime", t:="TimePeriod", f:="NEW", m:="Snmp:1.3.6.1.2.1.1.3.0|Snmp_Field:{0}.Value|Snmp_Transient:True", d:="The time (in hundredths of a second) since the network management portion of the system was last re-initialized.") #>
+<# Add_Field(n:="Contact", t:="System.String", m:="Snmp:1.3.6.1.2.1.1.4.0", d:="The textual identification of the contact person for this managed node, together with information on how to contact this person.") #>
+<# Add_Field(n:="Location", t:="Location", m:="Snmp:1.3.6.1.2.1.1.6.0", d:="The physical location of this node.") #>
+<# Add_Field(n:="Services", t:="System.Int64", m:="Snmp:1.3.6.1.2.1.1.7.0", d:="The services of the network device.") #>
+<# Add_Field(n:="TcpCurrentConnections", t:="System.Int64", m:="Snmp:1.3.6.1.2.1.6.9.0|Snmp_Transient:True", d:="The number of TCP connections for which the current state is either ESTABLISHED or CLOSE-WAIT.") #>
+<# Add_Field(n:="InDatagramsDiscarded", t:="System.Int64", m:="Snmp:1.3.6.1.2.1.4.8.0|Snmp_Transient:True", d:="The number of input IP datagrams for which no problems were encountered to prevent their continued processing, but which were discarded (e.g., for lack of buffer space). Note that this counter does not include any datagrams discarded while awaiting re-assembly.") #>
+<# Add_Field(n:="OutDatagramsDiscards", t:="System.Int64", m:="Snmp:1.3.6.1.2.1.4.11.0|Snmp_Transient:True", d:="The number of output IP datagrams for which no problem was encountered to prevent their transmission to their destination, but which were discarded (e.g., for lack of buffer space).  Note that this counter would include datagrams counted in ipForwDatagrams if any such packets met this (discretionary) discard criterion.") #>
+<# Add_Field(n:="InDatagramsDelivered", t:="System.Int64", m:="Snmp:1.3.6.1.2.1.4.9.0|Snmp_Transient:True", d:="The total number of input datagrams successfully delivered to IP user-protocols (including ICMP).") #>
+<# Add_Field(n:="OutDatagramsRequests", t:="System.Int64", m:="Snmp:1.3.6.1.2.1.4.10.0|Snmp_Transient:True", d:="The total number of IP datagrams which local IP user-protocols (including ICMP) supplied to IP in requests for transmission.  Note that this counter does not include any datagrams counted in ipForwDatagrams.") #>
+<# Add_Field(n:="InterfaceCount", t:="System.Int64", m:="Snmp:1.3.6.1.2.1.2.1.0", d:="Total Number of Interfaces") #>
+<# Add_Field(n:="Interfaces", t:="Caerus.NetworkInterfaceCollection", m:="Snmp:1.3.6.1.2.1.2.2.1.1.#|Snmp_Field:Index", d:="Interfaces for the Device (Note Weird Indexing for EMC Devices).") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="NONE", t:="System.Int64", v:=0) #>
+<# Add_Enum(n:="SHUTDOWN", d:="The interface will be forced to shut down.", v:=1) #>
+<# Add_Enum(n:="DROP_NOTIFY", d:="The matched traffic will be dropped and cpsSecureMacAddrViolation notification will be generated.", v:=2) #>
+<# Add_Enum(n:="DROP", d:="The matched traffic will be dropped.", v:=3) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

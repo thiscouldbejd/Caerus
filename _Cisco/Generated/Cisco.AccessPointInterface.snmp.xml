@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Caerus.Snmp.ObjectMapping>
+
+		<InheritsMappings>True</InheritsMappings>
+
+		<FieldMappings>
+
+			<Caerus.Snmp.FieldMapping->
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>RadioType</Name>
+					<Value>1.2.840.10036.4.1.1.1.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>HTMode</Name>
+					<Value>1.3.6.1.4.1.9.9.607.1.1.2.1.1.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>HT40Mhz</Name>
+					<Value>1.3.6.1.4.1.9.9.607.1.1.2.1.5.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>HTShortGuard20Mhz</Name>
+					<Value>1.3.6.1.4.1.9.9.607.1.1.2.1.14.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>HTShortGuard40Mhz</Name>
+					<Value>1.3.6.1.4.1.9.9.607.1.1.2.1.16.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>HTSpeeds</Name>
+					<Value>1.3.6.1.4.1.9.9.626.1.1.1.1.1.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>Channel</Name>
+					<Value>1.3.6.1.4.1.9.9.272.1.1.2.5.1.3.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>Clients</Name>
+					<Value>1.3.6.1.4.1.9.9.273.1.1.2.1.1.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>Bridges</Name>
+					<Value>1.3.6.1.4.1.9.9.273.1.1.2.1.2.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>Repeaters</Name>
+					<Value>1.3.6.1.4.1.9.9.273.1.1.2.1.3.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>HistoricAssociations</Name>
+					<Value>1.3.6.1.4.1.9.9.273.1.1.3.1.1.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>HistoricAuthentications</Name>
+					<Value>1.3.6.1.4.1.9.9.273.1.1.3.1.2.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>HistoricRoamedIn</Name>
+					<Value>1.3.6.1.4.1.9.9.273.1.1.3.1.3.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>HistoricRoamedOut</Name>
+					<Value>1.3.6.1.4.1.9.9.273.1.1.3.1.4.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>HistoricDeauthentications</Name>
+					<Value>1.3.6.1.4.1.9.9.273.1.1.3.1.5.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>HistoricDisassociations</Name>
+					<Value>1.3.6.1.4.1.9.9.273.1.1.3.1.6.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>RoleType</Name>
+					<Value>1.3.6.1.4.1.9.9.272.1.1.1.1.1.1.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>ExtensionsEnabled</Name>
+					<Value>1.3.6.1.4.1.9.9.272.1.1.1.1.1.2.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>AllowBroadcastSsid</Name>
+					<Value>1.3.6.1.4.1.9.9.272.1.1.1.1.1.3.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MultipleBssidEnabled</Name>
+					<Value>1.3.6.1.4.1.9.9.272.1.1.1.1.1.16.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>VoipExtensions</Name>
+					<Value>1.3.6.1.4.1.9.9.272.1.1.1.1.1.9.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>PowerLevels</Name>
+					<Value>1.3.6.1.4.1.9.9.272.1.1.2.17.1.1.{Index}.1+</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>PowerLevels_Client</Name>
+					<Value>1.3.6.1.4.1.9.9.272.1.1.2.13.1.1.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>CurrentPowerLevel</Name>
+					<Value>1.3.6.1.4.1.9.9.272.1.1.2.17.1.2.{Index}.1+</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>CurrentPowerLevel_Client</Name>
+					<Value>1.3.6.1.4.1.9.9.272.1.1.2.13.1.10.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MPDU_Tx.Value</Name>
+					<Value>1.2.840.10036.2.2.1.1.1.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MPDU_Rx.Value</Name>
+					<Value>1.2.840.10036.2.2.1.10.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MSDU_Tx_Multicast.Value</Name>
+					<Value>1.2.840.10036.2.2.1.2.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MSDU_Rx_Multicast.Value</Name>
+					<Value>1.2.840.10036.2.2.1.11.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MSDU_Tx.Value</Name>
+					<Value>1.2.840.10036.2.2.1.13.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MSDU_Tx_Failed.Value</Name>
+					<Value>1.2.840.10036.2.2.1.3.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MSDU_Tx_Retries.Value</Name>
+					<Value>1.2.840.10036.2.2.1.4.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MSDU_Tx_MultipleRetries.Value</Name>
+					<Value>1.2.840.10036.2.2.1.5.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MSDU_Tx_Energy_Error.Value</Name>
+					<Value>1.3.6.1.4.1.9.9.272.1.2.1.1.1.1.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MSDU_Rx_Duplicates.Value</Name>
+					<Value>1.2.840.10036.2.2.1.6.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MSDU_Rx_RTS_Success.Value</Name>
+					<Value>1.2.840.10036.2.2.1.7.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MSDU_Rx_RTS_Error.Value</Name>
+					<Value>1.2.840.10036.2.2.1.8.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MSDU_Rx_ACK_Error.Value</Name>
+					<Value>1.2.840.10036.2.2.1.9.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MSDU_Rx_FCS_Error.Value</Name>
+					<Value>1.2.840.10036.2.2.1.12.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MSDU_Rx_WEP_Error.Value</Name>
+					<Value>1.2.840.10036.2.2.1.14.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MSDU_Rx_CRC_Error.Value</Name>
+					<Value>1.3.6.1.4.1.9.9.272.1.2.1.1.1.2.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MSDU_Rx_SSID_Error.Value</Name>
+					<Value>1.3.6.1.4.1.9.9.272.1.2.1.1.1.3.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+			</Caerus.Snmp.FieldMapping->
+
+		</FieldMappings>
+
+		<TableMappings>
+
+			<Caerus.Snmp.TableMapping->
+
+				<Caerus.Snmp.TableMapping>
+
+					<Name>Ssids</Name>
+
+					<MappingType>SsidCollection</MappingType>
+
+					<FieldMappings>
+
+						<Caerus.Snmp.FieldMapping->
+
+							<Caerus.Snmp.FieldMapping>
+								<Name>Index</Name>
+								<Value>1.3.6.1.4.1.9.9.272.1.1.1.6.1.2.{Index}.#</Value>
+							</Caerus.Snmp.FieldMapping>
+
+						</Caerus.Snmp.FieldMapping->
+
+					</FieldMappings>
+
+				</Caerus.Snmp.TableMapping>
+
+				<Caerus.Snmp.TableMapping>
+
+					<Name>Bands</Name>
+
+					<MappingType>FrequencyBandCollection</MappingType>
+
+					<FieldMappings>
+
+						<Caerus.Snmp.FieldMapping->
+
+							<Caerus.Snmp.FieldMapping>
+								<Name>Index</Name>
+								<Value>1.3.6.1.4.1.9.9.272.1.1.2.15.1.2.{Index}.#</Value>
+							</Caerus.Snmp.FieldMapping>
+
+						</Caerus.Snmp.FieldMapping->
+
+					</FieldMappings>
+
+				</Caerus.Snmp.TableMapping>
+
+				<Caerus.Snmp.TableMapping>
+
+					<Name>CDPEntries</Name>
+
+					<MappingType>CDPEntryCollection</MappingType>
+
+					<FieldMappings>
+
+						<Caerus.Snmp.FieldMapping->
+
+							<Caerus.Snmp.FieldMapping>
+								<Name>Index</Name>
+								<Value>1.3.6.1.4.1.9.9.23.1.2.1.1.3.{Index}.#</Value>
+							</Caerus.Snmp.FieldMapping>
+
+						</Caerus.Snmp.FieldMapping->
+
+					</FieldMappings>
+
+				</Caerus.Snmp.TableMapping>
+
+			</Caerus.Snmp.TableMapping->
+
+		</TableMappings>
+
+	</Caerus.Snmp.ObjectMapping>

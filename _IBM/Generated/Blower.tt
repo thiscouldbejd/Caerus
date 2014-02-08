@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="IBM", d:="Class Representing an IBM Blower") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Value}%") #>
+<# Add_Field(n:="Value", t:="System.Double", d:="Provides the Blower Speed as a Percentage Value") #>
+<# Add_Field(n:="NotSupported", t:="System.Boolean", f:="True", d:="Whether Values are not supported on this object") #>
+<# Add_Field(n:="Offline", t:="System.Boolean", d:="Whether this blower is offline") #>
+<# Add_Field(n:="State", t:="BlowerState") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

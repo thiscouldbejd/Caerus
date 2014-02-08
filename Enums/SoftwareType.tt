@@ -1,0 +1,6 @@
+﻿<# Add_Class(d:="Enum Representing Software Type") #>
+<# Add_Enum(n:="Unknown", d:="Software Type is Unknown.") #>
+<# Add_Enum(n:="OperatingSystem", d:="Software Type is Operating System (OS).") #>
+<# Add_Enum(n:="DeviceDriver", d:="Software Type is Device Driver.") #>
+<# Add_Enum(n:="Application", d:="Software Type is Application.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

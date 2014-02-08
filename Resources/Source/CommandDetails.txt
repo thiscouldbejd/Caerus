@@ -1,0 +1,88 @@
+﻿; Directory Command Descriptions
+
+commandDirectoryDescription = LDAP Directory Commands
+commandDirectoryDescriptionCreateGroup = Create LDAP Directory Group
+commandDirectoryDescriptionCreateAccount = Create LDAP Directory Account
+commandDirectoryDescriptionGetUser = Get LDAP Directory User Account
+commandDirectoryDescriptionGetGroup = Get LDAP Directory Group
+commandDirectoryDescriptionGetComputer = Get LDAP Directory Computer
+
+; Directory Command Parameter Descriptions
+
+commandDirectoryParameterDescriptionConnectionServer = LDAP Connection Server
+commandDirectoryParameterDescriptionConnectionRoot = LDAP Connection Root
+commandDirectoryParameterDescriptionConnectionUsername = LDAP Connection Username
+commandDirectoryParameterDescriptionConnectionPassword = LDAP Connection Password
+commandDirectoryParameterDescriptionEntryRoot = LDAP Entry Root
+commandDirectoryParameterDescriptionAccountGivenname = LDAP Account GivenName
+commandDirectoryParameterDescriptionAccountSurname = LDAP Account Surname
+commandDirectoryParameterDescriptionAccountUsername = LDAP Account Username
+commandDirectoryParameterDescriptionAccountPassword = LDAP Account Password
+commandDirectoryParameterDescriptionAccountId = LDAP Account Id
+commandDirectoryParameterDescriptionAccountDescription = LDAP Account Description
+commandDirectoryParameterDescriptionAccountDepartment = LDAP Account Department
+commandDirectoryParameterDescriptionAccountProfile = LDAP Account Profile Directory Base
+commandDirectoryParameterDescriptionAccountHome = LDAP Account Home Directory Base
+commandDirectoryParameterDescriptionAccountDrive = LDAP Account Home Drive
+commandDirectoryParameterDescriptionAccountSuffix = LDAP Principle Name Suffix
+commandDirectoryParameterDescriptionAccountGroups = LDAP Account Groups
+commandDirectoryParameterDescriptionGroupName = LDAP Group Name
+commandDirectoryParameterDescriptionComputerName = LDAP Computer Name
+
+; Network Command Descriptions
+
+commandNetworkDescription = Network Commands
+commandNetworkDescriptionPing = Ping Sweep
+commandNetworkDescriptionWake = Wake On Lan (WOL)
+commandNetworkDescriptionSnmp = Simple Network Management Protocol (SNMP)
+commandNetworkDescriptionGetSnmp = Get Simple Network Management Protocol Value
+commandNetworkDescriptionSetSnmp = Set Simple Network Management Protocol Value
+commandNetworkDescriptionGetSnmpNext = Get Next Simple Network Management Protocol Value
+commandNetworkDescriptionGetSnmpTree = Get Simple Network Management Protocol Tree
+commandNetworkDescriptionPopulateSnmp = Populate Objects using SNMP
+commandNetworkDescriptionMonitor = Monitor Devices
+commandNetworkDescriptionIgnoreIcmp = Whether ICMP Verification should be Ignored (e.g. no pre-ping)
+commandNetworkDescriptionSnmpUseSync = Whether only Synchronous Population should Occur
+commandNetworkDescriptionSnmpBindings = Number of Bindings per SNMP PDU
+commandNetworkDescriptionSnmpReceive = Receive Timeout for SNMP Connections
+commandNetworkDescriptionSnmpSend = Send Timeout for SNMP Connections
+commandNetworkDescriptionSnmpRetries = Retry Count for SNMP Connections
+commandNetworkDescriptionApUsage = Cisco Access Point Usage
+
+; Network Command Parameter Descriptions
+
+commandNetworkParameterDescriptionStartAddress = Start IP Address
+commandNetworkParameterDescriptionHostCount = Number Of Hosts
+commandNetworkParameterDescriptionMacAddress = MAC Address
+commandNetworkParameterDescriptionBroadcastAddress = Broadcast IP Address
+commandNetworkParameterDescriptionPortNumber = Port Number
+commandNetworkParameterDescriptionFqdn = Fully Qualified Domain Name
+commandNetworkParameterDescriptionFqdns = Fully Qualified Domain Names
+commandNetworkParameterDescriptionSnmpCommunity = SNMP Community (Readable)
+commandNetworkParameterDescriptionSnmpOid = SNMP Oid
+commandNetworkParameterDescriptionSnmpValue = SNMP Value
+commandNetworkParameterDescriptionSnmpVersion = SNMP Version (v1, v2, v2c, v2p, v3)
+commandNetworkParameterDescriptionDevices = Monitorable Device/s
+commandNetworkParameterDescriptionGroupName = Name for Monitorable Group
+commandNetworkParameterDescriptionSnmpBindings = <number of bindings (default = 4)>
+commandNetworkParameterDescriptionSnmpReceive = <timeout in msec (default = 500)>
+commandNetworkParameterDescriptionSnmpSend = <timeout in msec (default = 1000)>
+commandNetworkParameterDescriptionSnmpRetries = <number of retries to attempt (default = 1)>
+commandNetworkParameterDescriptionDeviceType = Type of Monitorable Device
+commandNetworkParameterDescriptionOutputUnhealthyDevicesOnly = Only Output Un-Healthy Devices
+
+; Cisco Command Descriptions
+
+commandCiscoDescription = Cisco Device Commands
+commandCiscoDescriptionFindAssociation = Find Access Point Association
+commandCiscoDescriptionConfigFormat = Format an Existing Configuration File from a Cisco Device
+commandCiscoDescriptionFindAddress = Find Switch Address
+
+; Cisco Command Parameter Descriptions
+
+commandCiscoParameterPhysicalAddress = Physical Address
+commandCiscoParameterAccessPoints = Access Points
+commandCiscoParameterDevices = Network Devices (Can be Access Points, Switches etc)
+commandCiscoParameterInputConfigFile = Input Configuration File
+commandCiscoParameterOutputConfigFile = Output Configuration File (will create if non-existent)
+commandCicsoSwitchParameterSwitches = Switches

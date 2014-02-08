@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Exterity", d:="Enum Representing Exterity Device Type") #>
+<# Add_Enum(n:="Encoder", t:="System.Int64", d:="Type is Encoder") #>
+<# Add_Enum(n:="Decoder", d:="Type is Decoder") #>
+<# Add_Enum(n:="TVGateway", d:="Type is TV Gateway") #>
+<# Add_Enum(n:="AvediaServer", d:="Type is Avedia Server") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

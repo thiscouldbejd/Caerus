@@ -1,0 +1,3 @@
+﻿<# Add_Class(a:="IBM", i:="Leviathan.Collections.GeneralCollection") #>
+<# Add_Behaviour(n:="Collection", p:="Cl_Name:Power Supplies|Cl_ElementType:PowerSupply") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

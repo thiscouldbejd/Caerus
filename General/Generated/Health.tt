@@ -1,0 +1,5 @@
+﻿<# Add_Class(d:="Health Details for an Entity") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Field(n:="Status", t:="HealthStatus") #>
+<# Add_Field(n:="Details", t:="System.String") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

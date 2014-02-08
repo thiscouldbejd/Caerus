@@ -1,0 +1,9 @@
+﻿<# Add_Class(d:="General Device Type") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Name") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Values:{Name}") #>
+<# Add_Behaviour(n:="Snmp") #>
+<# Add_Field(n:="Index", t:="System.Int32", d:="A unique value for each device contained by the host. The value for each device must remain constant at least from one re-initialization of the agent to the next re-initialization.") #>
+<# Add_Field(n:="Name", t:="System.String", m:="Snmp:1.3.6.1.2.1.25.3.2.1.3.{Index}", d:="The name of the device representing by this entry.") #>
+<# Add_Field(n:="Type", t:="DeviceType", m:="Snmp:1.3.6.1.2.1.25.3.2.1.2.{Index}|Snmp_OidToEnum:1.3.6.1.2.1.25.3.1.", d:="The type of device represented by this entry.") #>
+<# Add_Field(n:="Status", t:="DeviceStatus", m:="Snmp:1.3.6.1.2.1.25.3.2.1.5.{Index}", d:="The status of device represented by this entry.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

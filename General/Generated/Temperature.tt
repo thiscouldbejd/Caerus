@@ -1,0 +1,7 @@
+﻿<# Add_Class(d:="Class Representing a Temperature Value") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Value}C") #>
+<# Add_Field(n:="Value", t:="System.Double", d:="Temperature Value as a Centrigrade Value") #>
+<# Add_Field(n:="Farenheit", t:="System.Double") #>
+<# Add_Field(n:="WarningLevelHigh", t:="System.Double", f:="60") #>
+<# Add_Field(n:="WarningLevelLow", t:="System.Double", f:="10") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

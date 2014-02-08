@@ -1,0 +1,11 @@
+﻿<# Add_Class(a:="Snmp") #>
+<# Add_Enum(n:="GET_REQUEST", v:=0) #>
+<# Add_Enum(n:="GET_NEXT_REQUEST", v:=1) #>
+<# Add_Enum(n:="GET_RESPONSE", v:=2) #>
+<# Add_Enum(n:="SET_REQUEST", v:=3) #>
+<# Add_Enum(n:="TRAP_V1", v:=4) #>
+<# Add_Enum(n:="GET_BULK_REQUEST", v:=5) #>
+<# Add_Enum(n:="INFORM_REQUEST", v:=6) #>
+<# Add_Enum(n:="TRAP_V2", v:=7) #>
+<# Add_Enum(n:="REPORT", v:=8) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

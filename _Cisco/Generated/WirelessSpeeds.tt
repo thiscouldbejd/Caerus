@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:;HT|Fo_Values:{Max}mbit/m{HT_Max};m{HT_Max}") #>
+<# Add_Field(n:="Value", t:="System.Int32()") #>
+<# Add_Field(n:="Max", t:="System.Int32") #>
+<# Add_Field(n:="HT_Value", t:="System.Int32()") #>
+<# Add_Field(n:="HT_Max", t:="System.Int32") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

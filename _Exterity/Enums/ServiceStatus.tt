@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Exterity", d:="Enum Representing Exterity Service Status") #>
+<# Add_Enum(n:="Unknown", t:="System.Int64", d:="Service Status is Unknown", v:=0) #>
+<# Add_Enum(n:="Stopped", t:="System.Int64", d:="Service Status is Stopped", v:=1) #>
+<# Add_Enum(n:="Started", t:="System.Int64", d:="Service Status is Started", v:=2) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

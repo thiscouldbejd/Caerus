@@ -1,0 +1,23 @@
+﻿<# Add_Class(a:="Commands", c:=False) #>
+<# Add_Behaviour(n:="Command", p:="Cm_Resource:CommandDetails|Cm_Name:network|Cm_Description:@commandNetworkDescription@") #>
+<# Add_Behaviour(n:="CommandFlag", p:="Fl_Resource=CommandDetails|" & _
+"Pr_CommandFlag:IgnoreIcmpConnectivity;UseSyncPopulation;MaximumBindingsPerPDU;SnmpReceiveTimeout;SnmpSendTimeout;SnmpTimeoutRetries|" & _
+"Fl_Flags:ignore-icmp;snmp-sync;snmp-bindings;snmp-receive;snmp-send;snmp-timeout|" & _
+"Fl_Descriptions:@commandNetworkDescriptionIgnoreIcmp@;@commandNetworkDescriptionSnmpUseSync@;@commandNetworkDescriptionSnmpBindings@;" & _
+"@commandNetworkDescriptionSnmpReceive;@commandNetworkDescriptionSnmpSend@;@commandNetworkDescriptionSnmpRetries@|" & _
+"Fl_Args:;;@commandNetworkParameterDescriptionSnmpBindings@;@commandNetworkParameterDescriptionSnmpReceive@;" & _
+"@commandNetworkParameterDescriptionSnmpSend@;@commandNetworkParameterDescriptionSnmpRetries@") #>
+<#@ include file="..\Definitions\Command.def" #>
+<# Add_Field(n:="IgnoreIcmpConnectivity", t:="System.Boolean") #>
+<# Add_Field(n:="UseSyncPopulation", t:="System.Boolean") #>
+<# Add_Field(n:="MaximumBindingsPerPDU", t:="System.Int32", f:="4") #>
+<# Add_Field(n:="SnmpReceiveTimeout", t:="System.Int32", f:="2000") #>
+<# Add_Field(n:="SnmpSendTimeout", t:="System.Int32", f:="1000") #>
+<# Add_Field(n:="SnmpTimeoutRetries", t:="System.Int32", f:="1") #>
+<# Add_Field(n:="IndexParsedOidSuffix", t:="System.Char", f:="##HASH") #>
+<# Add_Field(n:="NextOidSuffix", t:="System.Char", f:="##PLUS") #>
+<# Add_Field(n:="ParentVariable", t:="System.String", f:="Parent") #>
+<# Add_Field(n:="ASyncPopulations", t:="System.Collections.Generic.List(Of System.Int32)", f:="NEW") #>
+<# Add_Field(n:="ASyncCount", t:="System.Int32", f:="0") #>
+<# Add_Field(n:="Monitored_Devices", t:="System.Collections.Generic.List(Of Caerus.Snmp.ISnmpManageable)", f:="NEW") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

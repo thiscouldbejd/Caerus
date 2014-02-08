@@ -1,0 +1,21 @@
+﻿<# Add_Class(a:="Snmp") #>
+<# Add_Enum(n:="NO_ERROR", v:=0, d:="No error occurred. This code is also used in all request PDUs, since they have no error status to report") #>
+<# Add_Enum(n:="TOO_BIG", v:=1, d:="The size of the Response-PDU would be too large to transport") #>
+<# Add_Enum(n:="NO_SUCH_NAME", v:=2, d:="The name of a requested object was not found") #>
+<# Add_Enum(n:="BAD_VALUE", v:=3, d:="A value in the request didn't match the structure that the recipient of the request had for the object. For example, an object in the request was specified with an incorrect length or type") #>
+<# Add_Enum(n:="READ_ONLY", v:=4, d:="An attempt was made to set a variable that has an Access value indicating that it is read-only") #>
+<# Add_Enum(n:="GENERAL_ERROR", v:=5, d:="An error occurred other than one indicated by a more specific error code in this table") #>
+<# Add_Enum(n:="NO_ACCESS", v:=6, d:="Access was denied to the object for security reasons") #>
+<# Add_Enum(n:="WRONG_TYPE", v:=7, d:="The object type in a variable binding is incorrect for the object") #>
+<# Add_Enum(n:="WRONG_LENGTH", v:=8, d:="A variable binding specifies a length incorrect for the object") #>
+<# Add_Enum(n:="WRONG_ENCODING", v:=9, d:="A variable binding specifies an encoding incorrect for the object") #>
+<# Add_Enum(n:="WRONG_VALUE", v:=10, d:="The value given in a variable binding is not possible for the object") #>
+<# Add_Enum(n:="NO_CREATION", v:=11, d:="A specified variable does not exist and cannot be created") #>
+<# Add_Enum(n:="INCONSISTENT_VALUE", v:=12, d:="A variable binding specifies a value that could be held by the variable but cannot be assigned to it at this time") #>
+<# Add_Enum(n:="RESOURCE_UNAVAILABLE", v:=13, d:="An attempt to set a variable required a resource that is not available") #>
+<# Add_Enum(n:="COMMIT_FAILED", v:=14, d:="An attempt to set a particular variable failed") #>
+<# Add_Enum(n:="UNDO_FAILED", v:=15, d:="An attempt to set a particular variable as part of a group of variables failed, and the attempt to then undo the setting of other variables was not successful") #>
+<# Add_Enum(n:="AUTHORISATION_ERROR", v:=16, d:="A problem occurred in authorization") #>
+<# Add_Enum(n:="NOT_WRITABLE", v:=17, d:="The variable cannot be written or created") #>
+<# Add_Enum(n:="INCONSISTENT_NAME", v:=18, d:="The name in a variable binding specifies a variable that does not exist") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

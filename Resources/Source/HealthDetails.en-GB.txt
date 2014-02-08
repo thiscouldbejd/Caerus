@@ -1,0 +1,30 @@
+﻿; Health General Descriptions
+
+healthGeneralNetworkDeviceDown = Device is not currently reachable.
+healthGeneralStorageDeviceUsage = Storage Device [{0}] is {1} full.
+healthGeneralTemperatureTooLow = Temperature is too low [{0}], minimum is {1}.
+healthGeneralTemperatureTooHigh = Temperature is too high [{0}], maximum is {1}.
+healthGeneralNetworkInterfaceDown = Interface [{0}] should be UP but is currently DOWN.
+
+; Health Cisco Descriptions
+healthCiscoClientAssociationTransmitFailsTooHigh = {0} of Out-Packets failed to be transmitted ({1} Threshold).
+healthCiscoClientAssociationTransmitRetriesTooHigh = {0} of Out-Packets needed to be retried ({1} Threshold).
+healthCiscoClientAssociationMICErrorsTooHigh = {0} of In-Packets were MIC Errors ({1} Threshold).
+healthCiscoClientAssociationMICMissingTooHigh = {0} of In-Packets had missing MICs ({1} Threshold).
+healthCiscoEntitySensorNonOperational = Sensor {0} is non-operational.
+healthCiscoMonitorStatus = {0} Monitor Status is {1}.
+healthCiscoSensorStatus = Sensor Status is {0}.
+healthCiscoVlanSuspended = Vlan {0} ({1}) is suspended.
+
+; Health IBM Descriptions
+healthIBMBladeServerStatus = Blade Server {0} ({1}) Status is {2}.
+healthIBMBladeBlowerStatus = Blade Centre Blower Status is {0} (Current Speed = {1}).
+healthIBMBladePowerDomainStatus = Blade Centre Power Domain {0} Status is {1} (Used = {2}, Total = {3}).
+healthIBMBladePowerSupplyStatus = Blade Centre Power Supply {0} Status is {1}.
+healthIBMBladeSwitchStatus = Blade Centre Switch {0} Status is {1}.
+healthIBMBladeTemperatureSensorOffline = Blade Centre Temperature Sensor Offline.
+
+; Health QNAP Descriptions
+healthQNAPHardDriveNotReady = Hard Drive {0} ({1}) Not Ready.
+healthQNAPHardDriveBadSMART = Hard Drive {0} ({1}) SMART Status is {2}.
+healthQNAPHardDriveVolumeNotReady = Volumne {0} ({1}) Not Ready, Status is {2}.

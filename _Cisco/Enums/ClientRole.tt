@@ -1,0 +1,9 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="ClientStation", t:="System.Int64", v:=0) #>
+<# Add_Enum(n:="Repeater", v:=1) #>
+<# Add_Enum(n:="AccessPoint", v:=2) #>
+<# Add_Enum(n:="BridgeHost", v:=3) #>
+<# Add_Enum(n:="Bridge", v:=4) #>
+<# Add_Enum(n:="BridgeRoot", v:=5) #>
+<# Add_Enum(n:="EthernetClient", v:=6) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

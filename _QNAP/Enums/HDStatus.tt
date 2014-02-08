@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="QNAP", d:="Enum Representing NAP Hard-Drive Status") #>
+<# Add_Enum(n:="READY", t:="System.Int64", v:=0) #>
+<# Add_Enum(n:="NO_DISK", v:=-5) #>
+<# Add_Enum(n:="INVALID", v:=-6) #>
+<# Add_Enum(n:="RW_ERROR", v:=-9) #>
+<# Add_Enum(n:="UNKNOWN", v:=-4) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

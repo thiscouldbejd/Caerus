@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Cisco", d:="Access Point") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Name") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Name}") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<#@ include file="..\Definitions\Device.def" #>
+<# Add_Field(n:="Interfaces", t:="AccessPointInterfaceCollection", f:="NEW", m:="Snmp:1.3.6.1.2.1.2.2.1.1|Snmp_Field:Index", d:="Interfaces for the Device.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

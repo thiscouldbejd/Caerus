@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Caerus.Snmp.ObjectMapping>
+
+		<InheritsMappings>True</InheritsMappings>
+
+		<FieldMappings>
+
+			<Caerus.Snmp.FieldMapping->
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>Signal</Name>
+					<Value>1.3.6.1.4.1.38072.4.8.1.1.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>SNR</Name>
+					<Value>1.3.6.1.4.1.38072.4.8.1.2.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>UnCorrectableBlocks</Name>
+					<Value>1.3.6.1.4.1.38072.4.8.1.3.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>HasLock</Name>
+					<Value>1.3.6.1.4.1.38072.4.8.1.4.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>ContinuityErrors</Name>
+					<Value>1.3.6.1.4.1.38072.4.8.1.5.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>SignalQuality</Name>
+					<Value>1.3.6.1.4.1.38072.4.8.1.6.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+			</Caerus.Snmp.FieldMapping->
+
+		</FieldMappings>
+
+		<TableMappings>
+
+			<Caerus.Snmp.TableMapping->
+
+			</Caerus.Snmp.TableMapping->
+
+		</TableMappings>
+
+	</Caerus.Snmp.ObjectMapping>

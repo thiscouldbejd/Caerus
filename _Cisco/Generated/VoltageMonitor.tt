@@ -1,0 +1,9 @@
+﻿<# Add_Class(a:="Cisco", d:="Voltage Monitor") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Index") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Description}") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Behaviour(n:="Snmp") #>
+<# Add_Field(n:="Index", t:="System.Int32", d:="The index for this entry.") #>
+<# Add_Field(n:="Description", t:="System.String", m:="Snmp:1.3.6.1.4.1.9.9.13.1.2.1.2.{Index}", d:="Textual description of the testpoint being instrumented. This description is a short textual label, suitable as a human-sensible identification for the rest of the information in the entry.") #>
+<# Add_Field(n:="State", t:="EnvironmentalMonitoringState", m:="Snmp:1.3.6.1.4.1.9.9.13.1.2.1.7.{Index}", d:="The current state of the testpoint being instrumented.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

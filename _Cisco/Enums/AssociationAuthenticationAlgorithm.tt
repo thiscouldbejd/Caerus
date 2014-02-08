@@ -1,0 +1,8 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="MD5", t:="System.Int64", b:=True, d:="Message-digest algorithm", v:=128) #>
+<# Add_Enum(n:="LEAP", d:="Cisco Light-weight EAP", v:=64) #>
+<# Add_Enum(n:="PEAP", d:="Protected EAP", v:=32) #>
+<# Add_Enum(n:="EAPTLS", d:="EAP Transport Layer Security", v:=16) #>
+<# Add_Enum(n:="EAPSIM", d:="EAP Enhanced GSM Authentication", v:=8) #>
+<# Add_Enum(n:="EAPFAST", d:="Cisco EAP Fast", v:=4) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

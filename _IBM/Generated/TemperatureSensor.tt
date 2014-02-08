@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="IBM", i:="Temperature", d:="Class Representing an IBM Temperature Sensor") #>
+<# Add_Field(n:="NotSupported", t:="System.Boolean", d:="Whether Values are not supported on this object") #>
+<# Add_Field(n:="Offline", t:="System.Boolean", d:="Whether this Temperature Sensor is offline") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

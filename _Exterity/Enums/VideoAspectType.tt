@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Exterity", d:="Enum Representing Exterity Video Aspect Type") #>
+<# Add_Enum(n:="Off", t:="System.Int64", d:="Type is Off", v:=0) #>
+<# Add_Enum(n:="Normal", d:="Type is Normal (4:3)", v:=1) #>
+<# Add_Enum(n:="Wide", d:="Type is Wide (16:9)", v:=2) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

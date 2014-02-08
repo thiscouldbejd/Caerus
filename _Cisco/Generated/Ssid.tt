@@ -1,0 +1,11 @@
+﻿<# Add_Class(a:="Cisco", d:="Ssid") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Index") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Name}") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Behaviour(n:="Snmp") #>
+<# Add_Field(n:="Index", t:="System.Int32", d:="The index of this Ssid.") #>
+<# Add_Field(n:="Name", t:="System.String", m:="Snmp:1.3.6.1.4.1.9.9.272.1.1.1.6.1.2.{Parent.Index}.{Index}", d:="This object specifies a SSID recognized by this radio interface.  The radio interface shall respond to probe requests using this SSID, but it does not advertise this SSID in its beacons.") #>
+<# Add_Field(n:="Broadcast", t:="System.Boolean", m:="Snmp:1.3.6.1.4.1.9.9.272.1.1.1.6.1.3.{Parent.Index}.{Index}", d:="This object indicates if an auxiliary SSID is the Broadcast SSID. There is only one Broadcast SSID per IEEE 802.11 radio interface.") #>
+<# Add_Field(n:="MaxAssociations", t:="System.Int32", m:="Snmp:1.3.6.1.4.1.9.9.272.1.1.1.6.1.4.{Parent.Index}.{Index}", d:="This object indicates if an auxiliary SSID is the Broadcast SSID. There is only one Broadcast SSID per IEEE 802.11 radio interface.") #>
+<# Add_Field(n:="Associations", t:="ClientAssociationCollection", m:="Snmp:1.3.6.1.4.1.9.9.273.1.2.1.1.2.{Parent.Index}.{NameOid}.#|Snmp_Field:ClientAddress") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

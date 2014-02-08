@@ -1,0 +1,20 @@
+﻿<# Add_Class(d:="Enum Representing Device Type") #>
+<# Add_Enum(n:="Other", d:="Device Type is Other.", v:=1) #>
+<# Add_Enum(n:="Unknown", d:="Device Type is Unknown.", v:=2) #>
+<# Add_Enum(n:="Processor", d:="Device Type is Processor.", v:=3) #>
+<# Add_Enum(n:="Network", d:="Device Type is Network.", v:=4) #>
+<# Add_Enum(n:="Printer", d:="Device Type is Printer.", v:=5) #>
+<# Add_Enum(n:="DiskStorage", d:="Device Type is Disk Storage.", v:=6) #>
+<# Add_Enum(n:="Video", d:="Device Type is Video.", v:=10) #>
+<# Add_Enum(n:="Audio", d:="Device Type is Audio.", v:=11) #>
+<# Add_Enum(n:="Coprocessor", d:="Device Type is Coprocessor.", v:=12) #>
+<# Add_Enum(n:="Keyboard", d:="Device Type is Keyboard.", v:=13) #>
+<# Add_Enum(n:="Modem", d:="Device Type is Modem.", v:=14) #>
+<# Add_Enum(n:="ParallelPort", d:="Device Type is Parallel Port.", v:=15) #>
+<# Add_Enum(n:="Pointing", d:="Device Type is Pointing.", v:=16) #>
+<# Add_Enum(n:="SerialPort", d:="Device Type is Serial Port.", v:=17) #>
+<# Add_Enum(n:="Tape", d:="Device Type is Tape.", v:=18) #>
+<# Add_Enum(n:="Clock", d:="Device Type is Clock.", v:=19) #>
+<# Add_Enum(n:="VolatileMemory", d:="Device Type is VolatileMemory.", v:=20) #>
+<# Add_Enum(n:="NonVolatileMemory", d:="Device Type is NonVolatileMemory.", v:=21) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

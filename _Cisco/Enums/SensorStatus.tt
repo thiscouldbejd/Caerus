@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="Ok", t:="System.Int64") #>
+<# Add_Enum(n:="Unavailable") #>
+<# Add_Enum(n:="NonOperational") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

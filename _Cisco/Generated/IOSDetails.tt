@@ -1,0 +1,14 @@
+﻿<# Add_Class(a:="Cisco", d:="Internetwork Operating System Details") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Version;Release;Build") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Version}({Release})") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Field(n:="Image", t:="System.String", d:="The Image File.") #>
+<# Add_Field(n:="Version", t:="System.Single", d:="The Primary Version Number.") #>
+<# Add_Field(n:="Release", t:="System.Int32", d:="The Release Number") #>
+<# Add_Field(n:="Build", t:="System.Int32", d:="The Build Number.") #>
+<# Add_Field(n:="Rebuild", t:="System.Int32", d:="The Rebuild Number (Often a rebuild is compiled to fix a single specific problem or vulnerability for a given IOS version).") #>
+<# Add_Field(n:="Train", t:="IOSTrain", d:="The Train.") #>
+<# Add_Field(n:="TrainVersion", t:="System.Int32", d:="The Train Verson Number.") #>
+<# Add_Field(n:="CompilationDate", t:="System.DateTime", d:="The Date/Time the IOS Release was compiled.") #>
+<# Add_Field(n:="CompiledBy", t:="System.String", d:="Who the IOS Release was compiled by.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

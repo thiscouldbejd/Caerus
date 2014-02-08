@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Snmp") #>
+<# Add_Field(n:="Version", t:="SnmpVersion") #>
+<# Add_Field(n:="Community", t:="System.String") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

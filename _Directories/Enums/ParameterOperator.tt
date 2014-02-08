@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Directories") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Enum(n:="AndOperator", v:=1, d:="Represents an AND Operator") #>
+<# Add_Enum(n:="OrEquality", v:=2, d:="Represents an OR Operator") #>
+<# Add_Enum(n:="NotEquality", v:=3, d:="Represents a NOT Operator") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

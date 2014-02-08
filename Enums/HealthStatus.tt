@@ -1,0 +1,5 @@
+﻿<# Add_Class(d:="Health Status Enumeration. This relies on the worst Health (e.g. down) being the lowest numerical value etc.") #>
+<# Add_Enum(n:="Down", d:="Status is Down") #>
+<# Add_Enum(n:="Degraded", d:="Status is Degraded") #>
+<# Add_Enum(n:="Healthy", d:="Status is Healthy") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

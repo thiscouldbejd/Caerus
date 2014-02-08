@@ -1,0 +1,12 @@
+﻿<# Add_Class(a:="Directories", p:="CreateConnection()") #>
+<# Add_Behaviour(n:="Configurable", p:="Pr_Configurable:AdUserFieldMapping;AdUseSSL;AdUserImpersonate;AuthType;AdServer;AdBase;AdUsername;AdPassword") #>
+<# Add_Field(n:="AdUserFieldMapping", t:="System.String", f:="sAMAccountName") #>
+<# Add_Field(n:="AdUseSSL", t:="System.Boolean", f:="True") #>
+<# Add_Field(n:="AdUserImpersonate", t:="System.String") #>
+<# Add_Field(n:="AuthType", t:="AuthenticationType") #>
+<# Add_Field(n:="AdServer", t:="System.String") #>
+<# Add_Field(n:="AdBase", t:="System.String") #>
+<# Add_Field(n:="AdUsername", t:="System.String") #>
+<# Add_Field(n:="AdPassword", t:="System.String") #>
+<# Add_Field(n:="Cn", t:="AdConnection") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

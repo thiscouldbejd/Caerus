@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="WPA", t:="System.Int64", b:=True, v:=128) #>
+<# Add_Enum(n:="CCKM", v:=64) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

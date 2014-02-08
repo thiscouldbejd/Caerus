@@ -1,0 +1,13 @@
+﻿<# Add_Class(d:="Enum Representing Storage Type") #>
+<# Add_Enum(n:="None", d:="Type is None.", v:=0) #>
+<# Add_Enum(n:="Other", d:="Type is Other.", v:=1) #>
+<# Add_Enum(n:="PhysicalMemory", d:="Type is Physical Memory.", v:=2) #>
+<# Add_Enum(n:="VirtualMemory", d:="Type is Virtual Memory.", v:=3) #>
+<# Add_Enum(n:="FixedDisk", d:="Type is Fixed Disk.", v:=4) #>
+<# Add_Enum(n:="RemovableDisk", d:="Type is Removable Disk.", v:=5) #>
+<# Add_Enum(n:="FloppyDisk", d:="Type is Floppy Disk.", v:=6) #>
+<# Add_Enum(n:="CompactDisk", d:="Type is Compact Disk.", v:=7) #>
+<# Add_Enum(n:="RamDisk", d:="Type is Ram Disk.", v:=8) #>
+<# Add_Enum(n:="FlashDisk", d:="Type is Flash Disk.", v:=9) #>
+<# Add_Enum(n:="NetworkDisk", d:="Type is Network Disk.", v:=10) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

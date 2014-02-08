@@ -1,0 +1,15 @@
+﻿<# Add_Class(a:="Directories") #>
+<# Add_Enum(n:="UF_SCRIPT", v:=&H1, b:=True, d:="The logon script executed") #>
+<# Add_Enum(n:="UF_ACCOUNTDISABLE", v:=&H2, b:=True, d:="The user's account is disabled") #>
+<# Add_Enum(n:="UF_HOMEDIR_REQUIRED", v:=&H8, b:=True, d:="The home directory is required. This value is ignored") #>
+<# Add_Enum(n:="UF_ACCOUNT_LOCKOUT", v:=&H10, b:=True, d:="The account is currently locked out") #>
+<# Add_Enum(n:="UF_PASSWD_NOTREQD", v:=&H20, b:=True, d:="The user's password has expired") #>
+<# Add_Enum(n:="UF_PASSWD_CANT_CHANGE", v:="&H40", b:=True, d:="The user cannot change the password") #>
+<# Add_Enum(n:="UF_ENCRYPTED_TEXT_PASSWORD_ALLOWED", v:="&H80", b:=True, d:="The user's password is stored under reversible encryption in the Active Directory") #>
+<# Add_Enum(n:="UF_TEMP_DUPLICATE_ACCOUNT", v:="&H100", b:=True, d:="Local user account for users who have a primary account in another domain. This account provides user access to this domain only—not to any domain that trusts this domain.") #>
+<# Add_Enum(n:="UF_NORMAL_ACCOUNT", v:="&H200", b:=True, d:="Default account type that represents a typical user") #>
+<# Add_Enum(n:="UF_INTERDOMAIN_TRUST_ACCOUNT", v:="&H800", b:=True, d:="Account for a system domain that trusts other domains") #>
+<# Add_Enum(n:="UF_WORKSTATION_TRUST_ACCOUNT", v:="&H1000", b:=True, d:="Computer account for a Windows NT/Windows 2000 computer that is a member of this domain") #>
+<# Add_Enum(n:="UF_SERVER_TRUST_ACCOUNT", v:="&H2000", b:=True, d:="Account for a system backup domain controller that is a member of this domain") #>
+<# Add_Enum(n:="UF_DONT_EXPIRE_PASSWD", v:="&H10000", b:=True, d:="The password should never expire on the account") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

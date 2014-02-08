@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Cisco", d:="Port Associated with a Bridge") #>
+<# Add_Behaviour(n:="Snmp") #>
+<# Add_Field(n:="Index", t:="System.Int32", d:="The port number of the port for which this entry contains bridge management information.") #>
+<# Add_Field(n:="InterfaceIndex", t:="System.Int32", m:="Snmp:1.3.6.1.2.1.17.1.4.1.2.{Index}", d:="The value of the instance of the ifIndex object, defined in MIB-II, for the interface corresponding to this port.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

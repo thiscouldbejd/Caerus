@@ -1,0 +1,14 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="NONE", t:="System.Int64", v:=0) #>
+<# Add_Enum(n:="WORKGROUP_BRIDGE", v:=1) #>
+<# Add_Enum(n:="BRIDGE", v:=2) #>
+<# Add_Enum(n:="CLIENT", v:=3) #>
+<# Add_Enum(n:="ROOT", v:=4) #>
+<# Add_Enum(n:="REPEATER", v:=5) #>
+<# Add_Enum(n:="AP_BRIDGE", v:=6) #>
+<# Add_Enum(n:="AP_REPEATER", v:=7) #>
+<# Add_Enum(n:="IBSS", v:=8) #>
+<# Add_Enum(n:="NON_ROOT_BRIDGE", v:=9) #>
+<# Add_Enum(n:="NON_ROOT_BRIDGE_AND_AP", v:=10) #>
+<# Add_Enum(n:="SCANNER", v:=11) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

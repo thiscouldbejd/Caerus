@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Directories") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Enum(n:="Anonymous", v:=1, d:="Authentication Performed Anonymously (Without Credentials)") #>
+<# Add_Enum(n:="Integrated", v:=2, d:="Authentication Performed Integrated (Process Level Credentials)") #>
+<# Add_Enum(n:="Basic", v:=3, d:="Authentication Performed with Supplied Username and Password (Basic Credentials)") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

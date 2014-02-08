@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Exterity", d:="Enum Representing Exterity Stream Type") #>
+<# Add_Enum(n:="Elementary", t:="System.Int64", d:="Stream Type is Elementary", v:=0) #>
+<# Add_Enum(n:="Transport", d:="Stream Type is Transport", v:=1) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

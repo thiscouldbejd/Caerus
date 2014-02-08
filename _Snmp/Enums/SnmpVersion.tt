@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Snmp") #>
+<# Add_Enum(n:="SNMP_VERSION_1", v:=0, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_VERSION_2C", v:=1, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_VERSION_2P", v:=2, t:="System.Byte") #>
+<# Add_Enum(n:="SNMP_VERSION_3", v:=3, t:="System.Byte") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

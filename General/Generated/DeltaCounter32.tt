@@ -1,0 +1,6 @@
+﻿<# Add_Class(d:="General Device Type") #>
+<# Add_Field(n:="LastValue", a:="R", t:="System.Int64") #>
+<# Add_Field(n:="LastValueSet", a:="R", t:="System.DateTime") #>
+<# Add_Field(n:="CurrentValue", a:="R", t:="System.Int64") #>
+<# Add_Field(n:="CurrentValueSet", a:="R", t:="System.DateTime") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

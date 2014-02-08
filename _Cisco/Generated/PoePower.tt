@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Cisco", d:="Cisco Discovery Protocol Entry") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Value}W") #>
+<# Add_Field(n:="Value", t:="System.Double") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

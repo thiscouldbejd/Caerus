@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Snmp") #>
+<# Add_Enum(n:="v1") #>
+<# Add_Enum(n:="v2") #>
+<# Add_Enum(n:="v2c") #>
+<# Add_Enum(n:="v2p") #>
+<# Add_Enum(n:="v3") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

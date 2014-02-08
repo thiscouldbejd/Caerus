@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Caerus.Snmp.ObjectMapping>
+
+		<InheritsMappings>True</InheritsMappings>
+
+		<FieldMappings>
+
+			<Caerus.Snmp.FieldMapping->
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>Vlan</Name>
+					<Value>1.3.6.1.4.1.9.9.68.1.2.2.1.2.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>VoiceVlan</Name>
+					<Value>1.3.6.1.4.1.9.9.68.1.5.1.1.1.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>VlanType</Name>
+					<Value>1.3.6.1.4.1.9.9.68.1.2.2.1.1.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>VlanStatus</Name>
+					<Value>1.3.6.1.4.1.9.9.68.1.2.2.1.3.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>Secured</Name>
+					<Value>1.3.6.1.4.1.9.9.315.1.2.1.1.1.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>SecurityStatus</Name>
+					<Value>1.3.6.1.4.1.9.9.315.1.2.1.1.2.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>ViolationAction</Name>
+					<Value>1.3.6.1.4.1.9.9.315.1.2.1.1.8.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>CurrentMacAddressCount</Name>
+					<Value>1.3.6.1.4.1.9.9.315.1.2.1.1.4.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>MaxMaxAddressCount</Name>
+					<Value>1.3.6.1.4.1.9.9.315.1.2.1.1.3.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>LastMacAddress</Name>
+					<Value>1.3.6.1.4.1.9.9.315.1.2.1.1.10.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>Dot1xMode</Name>
+					<Value>1.0.8802.1.1.1.1.2.1.1.6.{Index}</Value>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>Dot1xStatus</Name>
+					<Value>1.0.8802.1.1.1.1.2.1.1.1.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+				<Caerus.Snmp.FieldMapping>
+					<Name>Dot1xAuthStatus</Name>
+					<Value>1.0.8802.1.1.1.1.2.1.1.5.{Index}</Value>
+					<Transient>True</Transient>
+				</Caerus.Snmp.FieldMapping>
+
+			</Caerus.Snmp.FieldMapping->
+
+		</FieldMappings>
+
+		<TableMappings>
+
+			<Caerus.Snmp.TableMapping->
+
+				<Caerus.Snmp.TableMapping>
+
+					<Name>CDPEntries</Name>
+
+					<MappingType>CDPEntryCollection</MappingType>
+
+					<FieldMappings>
+
+						<Caerus.Snmp.FieldMapping->
+
+							<Caerus.Snmp.FieldMapping>
+								<Name>Index</Name>
+								<Value>1.3.6.1.4.1.9.9.23.1.2.1.1.3.{Index}.#</Value>
+							</Caerus.Snmp.FieldMapping>
+
+						</Caerus.Snmp.FieldMapping->
+
+					</FieldMappings>
+
+				</Caerus.Snmp.TableMapping>
+
+			</Caerus.Snmp.TableMapping->
+
+		</TableMappings>
+
+	</Caerus.Snmp.ObjectMapping>

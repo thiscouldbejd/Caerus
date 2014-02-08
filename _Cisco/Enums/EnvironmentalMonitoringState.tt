@@ -1,0 +1,8 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="Normal", t:="System.Int64") #>
+<# Add_Enum(n:="Warning") #>
+<# Add_Enum(n:="Critical") #>
+<# Add_Enum(n:="Shutdown") #>
+<# Add_Enum(n:="NotPresent") #>
+<# Add_Enum(n:="NotFunctioning") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

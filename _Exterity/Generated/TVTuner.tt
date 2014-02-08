@@ -1,0 +1,13 @@
+﻿<# Add_Class(a:="Exterity", d:="Class Representing an Exterity TV Tuner") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Index") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Name}") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Behaviour(n:="Snmp") #>
+<# Add_Field(n:="Index", t:="System.Int32", d:="Card Index.") #>
+<# Add_Field(n:="Signal", t:="System.Int32", m:="Snmp:1.3.6.1.4.1.38072.4.8.1.1.{Index}", d:="Signal strength.") #>
+<# Add_Field(n:="SNR", t:="System.Int32", m:="Snmp:1.3.6.1.4.1.38072.4.8.1.2.{Index}", d:="Signal To Noise ratio.") #>
+<# Add_Field(n:="UnCorrectableBlocks", t:="System.Int32", m:="Snmp:1.3.6.1.4.1.38072.4.8.1.3.{Index}", d:="Uncorrectable blocks.") #>
+<# Add_Field(n:="HasLock", t:="System.Boolean", m:="Snmp:1.3.6.1.4.1.38072.4.8.1.4.{Index}", d:="Indicates whether the tuner has lock.") #>
+<# Add_Field(n:="ContinuityErrors", t:="System.Int32", m:="Snmp:1.3.6.1.4.1.38072.4.8.1.5.{Index}", d:="Number of continuity errors.") #>
+<# Add_Field(n:="SignalQuality", t:="System.Int32", m:="Snmp:1.3.6.1.4.1.38072.4.8.1.6.{Index}", d:="Signal Quality Estimation.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

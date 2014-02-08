@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Exterity", d:="Enum Representing Exterity Line Speed") #>
+<# Add_Enum(n:="_10Mbits", t:="System.Int64", d:="Ten Megabits", v:=0) #>
+<# Add_Enum(n:="_100Mbits", d:="One Hundred MegaBits", v:=1) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

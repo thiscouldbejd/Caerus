@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Exterity", d:="Enum Representing Exterity Test Status") #>
+<# Add_Enum(n:="Failed", t:="System.Int64", d:="Test Status is Failed", v:=-1) #>
+<# Add_Enum(n:="NotPerformed", d:="Test has not been performed", v:=0) #>
+<# Add_Enum(n:="Passed", d:="Test Status is Passed", v:=1) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

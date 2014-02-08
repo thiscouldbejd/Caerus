@@ -1,0 +1,13 @@
+﻿<# Add_Class(a:="QNAP", d:="Class Representing a Hard Drive in a QNAP Storage System") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Index") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Description}/{Capacity} ({Model})") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Behaviour(n:="Snmp") #>
+<# Add_Field(n:="Index", t:="System.Int32", d:="The index for a hard-drive in the table.") #>
+<# Add_Field(n:="Description", t:="System.String", m:="Snmp:1.3.6.1.4.1.24681.1.2.11.1.2.{Index}", d:="The Description of the Hard-Drive.") #>
+<# Add_Field(n:="Temperature", t:="Temperature", m:="Snmp:1.3.6.1.4.1.24681.1.2.11.1.3.{Index}", d:="The Temperature of the Hard-Drive.") #>
+<# Add_Field(n:="Status", t:="HDStatus", m:="Snmp:1.3.6.1.4.1.24681.1.2.11.1.4.{Index}", d:="The Status of the Hard-Drive.") #>
+<# Add_Field(n:="Model", t:="System.String", m:="Snmp:1.3.6.1.4.1.24681.1.2.11.1.5.{Index}", d:="The Model of the Hard-Drive.") #>
+<# Add_Field(n:="Capacity", t:="System.String", m:="Snmp:1.3.6.1.4.1.24681.1.2.11.1.6.{Index}", d:="The Capacity of the Hard-Drive.") #>
+<# Add_Field(n:="SMART", t:="System.String", m:="Snmp:1.3.6.1.4.1.24681.1.2.11.1.7.{Index}", d:="The S.M.A.R.T. Status of the Hard-Drive.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

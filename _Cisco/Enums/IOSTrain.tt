@@ -1,0 +1,10 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="Mainline", t:="System.Int64", d:="The mainline train is designed to be the most stable release the company can offer, and its feature set never expands during its lifetime. Updates are released only to address bugs in the product. The previous technology train becomes the source for the current mainline train — for example, the 12.1T train becomes the basis for the 12.2 mainline. Therefore, to determine the features available in a particular mainline release, look at the previous T train release.", v:=0) #>
+<# Add_Enum(n:="Technology", d:="Technology train, gets new features and bug fixes throughout its life, and is therefore less stable than the mainline. (In releases prior to Cisco IOS Release 12.0, the P train served as the Technology train.) Cisco doesn't recommend usage of T train in production environments unless there is urgency to implement a certain T train's new IOS feature.", v:=1) #>
+<# Add_Enum(n:="ServiceProvider", d:="Service Provider train, runs only on the company's core router products and is heavily customized for Service Provider customers.", v:=2) #>
+<# Add_Enum(n:="Enterprise", d:="Enterprise train, is customized for implementation in enterprise environments.", v:=3) #>
+<# Add_Enum(n:="Broadband", d:="Broadband train, support internet based broadband features.", v:=4) #>
+<# Add_Enum(n:="SpecialFunctionality", d:="The XA, XB ... special functionality train, needs to be documented", v:=5) #>
+<# Add_Enum(n:="Wireless", d:="Wireless (e.g. JA)", v:=6) #>
+<# Add_Enum(n:="Other", d:="Train designed for specific needs.", v:=99) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

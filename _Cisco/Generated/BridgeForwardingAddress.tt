@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Cisco", d:="Unicast entries for which the bridge has forwarding and/or filtering information") #>
+<# Add_Behaviour(n:="Snmp") #>
+<# Add_Field(n:="ForwardingAddress", t:="System.Net.NetworkInformation.PhysicalAddress", d:="The forwarding address/index for this entry.") #>
+<# Add_Field(n:="Port", t:="System.Int32", m:="Snmp:1.3.6.1.2.1.17.4.3.1.2.{ForwardingOid}", d:="Either the value '0', or the port number of the port on which a frame having a source address equal to the value of the corresponding instance of dot1dTpFdbAddress has been seen.  A value of '0' indicates that the port number has not been learned but that the bridge does have some forwarding/filtering information about this address (e.g. in the dot1dStaticTable). Implementors are encouraged to assign the port value to this object whenever it is learned even for addresses for which the corresponding value of dot1dTpFdbStatus is not learned(3).") #>
+<# Add_Field(n:="Status", t:="BridgeAddressStatus", m:="Snmp:1.3.6.1.2.1.17.4.3.1.3.{ForwardingOid}", d:="The status of this entry.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

@@ -1,0 +1,9 @@
+﻿<# Add_Class(a:="Directories", d:="Implements the IConnection Interface for the Active Directory Service") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Field(n:="AdAuthType", t:="AuthenticationType", a:="R", d:="Authentication Type to Use during Authentication/Bind", i:="IConnection.AuthenticationType") #>
+<# Add_Field(n:="AdBase", t:="System.String", a:="R", f:="String.Empty", d:="Directory Base to Connect to", i:="IConnection.Base") #>
+<# Add_Field(n:="AdServer", t:="System.String", a:="R", f:="String.Empty", d:="Explicit Server to Connect to", i:="IConnection.Server") #>
+<# Add_Field(n:="AdUsername", t:="System.String", a:="R", f:="String.Empty", d:="Username to be used when Authenticating/Binding", i:="IConnection.Username") #>
+<# Add_Field(n:="AdPassword", t:="System.String", a:="R", f:="String.Empty", d:="Password to be used when Authenticating/Binding", i:="IConnection.Password") #>
+<# Add_Field(n:="AdRoot", t:="System.DirectoryServices.DirectoryEntry", d:="Root Directory Entry of the Connection") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

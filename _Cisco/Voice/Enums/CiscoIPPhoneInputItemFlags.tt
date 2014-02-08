@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="Nothing", v:=0, t:="System.Int64") #>
+<# Add_Enum(n:="AlphaNumeric", v:=1) #>
+<# Add_Enum(n:="Numeric", v:=2) #>
+<# Add_Enum(n:="UpperCaseAlpha", v:=3) #>
+<# Add_Enum(n:="LowerCaseAlpha", v:=4) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

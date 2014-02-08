@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Snmp", d:="Snmp Object Mapping Class") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Field(n:="Version", t:="SnmpVersion", f:="SnmpVersion.SNMP_VERSION_2C", d:="Version of SNMP Required for this Mapping") #>
+<# Add_Field(n:="FieldMappings", t:="FieldMapping()", f:="NEW", d:="The Field Mappings") #>
+<# Add_Field(n:="TableMappings", t:="TableMapping()", f:="NEW", d:="Tables of the Object being Mapped") #>
+<# Add_Field(n:="InheritsMappings", t:="System.Boolean", d:="Whether the Mapping Inherits mappings up its Class Heirarchy.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

@@ -1,0 +1,9 @@
+﻿<# Add_Class(d:="Enum Representing Interface Status") #>
+<# Add_Enum(n:="UP", d:="Status is Up.") #>
+<# Add_Enum(n:="DOWN", d:="Status is Down.") #>
+<# Add_Enum(n:="TESTING", d:="Status is Testing.") #>
+<# Add_Enum(n:="UNKNOWN", d:="Status is Unknown.") #>
+<# Add_Enum(n:="DORMANT", d:="Status is Dormant.") #>
+<# Add_Enum(n:="NOT_PRESENT", d:="Status is Not Present.") #>
+<# Add_Enum(n:="LOWER_LAYER_DOWN", d:="Status is Lower Layer Down.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

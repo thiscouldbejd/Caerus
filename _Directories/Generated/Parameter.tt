@@ -1,0 +1,9 @@
+﻿<# Add_Class(a:="Directories", d:="Class that represents a Directory Services Parameter") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Behaviour(n:="Settable") #>
+<# Add_Field(n:="Name", t:="System.String") #>
+<# Add_Field(n:="Object", t:="System.Object") #>
+<# Add_Field(n:="Comparative", t:="ParameterComparator", f:="ParameterComparator.EqualTo") #>
+<# Add_Field(n:="Operator", t:="ParameterOperator", f:="ParameterOperator.AndOperator") #>
+<# Add_Field(n:="Relation", t:="Parameter") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

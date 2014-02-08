@@ -1,0 +1,9 @@
+﻿<# Add_Class(a:="Snmp", d:="Snmp Field Mapping Class") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Value") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Field(n:="Name", t:="System.String", d:="The Field Name") #>
+<# Add_Field(n:="Value", t:="System.String", d:="The Field Value") #>
+<# Add_Field(n:="OidToEnum", t:="System.String", d:="Whether an OID to Enum Transformation should occur, and with which OID") #>
+<# Add_Field(n:="Transient", t:="System.Boolean", d:="Whether the value is transient, e.g. changes frequently") #>
+<# Add_Field(n:="Member", t:="Leviathan.Inspection.MemberAnalyser", d:="The Member for the Mapping") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

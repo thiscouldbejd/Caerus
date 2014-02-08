@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Snmp", i:="SnmpLengthedBase", x:=True) #>
+<# Add_Field(n:="Type", t:="SnmpDataType") #>
+<# Add_Field(n:="RequestId", t:="System.Int64") #>
+<# Add_Field(n:="Error", t:="SnmpErrorStatus", f:="SnmpErrorStatus.NO_ERROR") #>
+<# Add_Field(n:="ErrorIndex", t:="System.Int64") #>
+<# Add_Field(n:="VariableBindings", t:="SnmpVariableBind()", f:="NEW") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

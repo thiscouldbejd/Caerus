@@ -1,0 +1,7 @@
+﻿<# Add_Class(d:="Enum Representing Device Status") #>
+<# Add_Enum(n:="Unknown", d:="Status is Unknown") #>
+<# Add_Enum(n:="Running", d:="Status is Running") #>
+<# Add_Enum(n:="Warning", d:="Status is Warning") #>
+<# Add_Enum(n:="Testing", d:="Status is Testing") #>
+<# Add_Enum(n:="Down", d:="Status is Down") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

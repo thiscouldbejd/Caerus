@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="Other", t:="System.Int64", v:=1) #>
+<# Add_Enum(n:="Minor", v:=10) #>
+<# Add_Enum(n:="Major", v:=20) #>
+<# Add_Enum(n:="Critical", v:=30) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

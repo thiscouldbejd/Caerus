@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Cisco") #>
+<# Add_Enum(n:="Open", t:="System.Int64", d:="Open System") #>
+<# Add_Enum(n:="SharedKey", d:="Shared Key") #>
+<# Add_Enum(n:="NetworkEap", d:="Network EAP") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

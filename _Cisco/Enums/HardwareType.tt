@@ -1,0 +1,14 @@
+﻿<# Add_Class(a:="Cisco", d:="Enum Representing Hardware Type") #>
+<# Add_Enum(n:="Other", t:="System.Int64", d:="Hardware Type Is Other.") #>
+<# Add_Enum(n:="Unknown", d:="Hardware Type Is Unknown.") #>
+<# Add_Enum(n:="Chassis", d:="Hardware Type Is Chassis.") #>
+<# Add_Enum(n:="Backplane", d:="Hardware Type Is Backplane.") #>
+<# Add_Enum(n:="Container", d:="Hardware Type Is Container.") #>
+<# Add_Enum(n:="PowerSupply", d:="Hardware Type Is Power Supply.") #>
+<# Add_Enum(n:="Fan", d:="Hardware Type Is Fan.") #>
+<# Add_Enum(n:="Sensor", d:="Hardware Type Is Sensor.") #>
+<# Add_Enum(n:="Module", d:="Hardware Type Is Module.") #>
+<# Add_Enum(n:="Port", d:="Hardware Type Is Port.") #>
+<# Add_Enum(n:="Stack", d:="Hardware Type Is Stack.") #>
+<# Add_Enum(n:="CPU", d:="Hardware Type Is CPU.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

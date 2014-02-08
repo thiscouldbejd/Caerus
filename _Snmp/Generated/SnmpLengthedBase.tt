@@ -1,0 +1,3 @@
+﻿<# Add_Class(a:="Snmp", x:=True) #>
+<# Add_Field(n:="Length", t:="System.Int32") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

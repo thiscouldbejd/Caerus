@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Directories", d:="This Enum is used to help define the Common Actions for Directory Entry Manipulation") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Enum(n:="SetPassword", v:=1, d:="The Set Password Action") #>
+<# Add_Enum(n:="DisabledAccount", v:=2, d:="The Disabled Password Action") #>
+<# Add_Enum(n:="LockedAccount", v:=3, d:="The Locked Account Action") #>
+<# Add_Enum(n:="RequiredPassword", v:=4, d:="The Required Password Action") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Directories") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Enum(n:="EqualTo", v:=1, d:="Represents an Equality Operator") #>
+<# Add_Enum(n:="ApproximatelyEqualTo", v:=2, d:="Represents an Approximate Equality Operator") #>
+<# Add_Enum(n:="LessThanOrEqualTo", v:=3, d:="Represents a Less-Than Or Equality Operator") #>
+<# Add_Enum(n:="GreaterThanOrEqualTo", v:=4, d:="Represents a Greater-Than Or Equality Operator") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

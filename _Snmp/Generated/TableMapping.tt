@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Snmp", i:="ObjectMapping") #>
+<# Add_Behaviour(n:="Serialisable", p:="Se_Full:False") #>
+<# Add_Field(n:="Name", t:="System.String", d:="Field/Property Name") #>
+<# Add_Field(n:="MappingType", t:="System.Type") #>
+<# Add_Field(n:="MaxTableEntries", t:="System.Int32", d:="Maximum Entries Returned for Tables") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>
