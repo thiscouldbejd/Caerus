@@ -1,3 +1,4 @@
+Imports Hermes.Cryptography.Cipher
 Imports System.IO
 
 Namespace Directories
@@ -344,7 +345,7 @@ Namespace Directories
                 End If
 
                 ' Set Password
-                newPhoneticPassword = CryptographyCommands.PhoneticPassword(userPassword)
+                newPhoneticPassword = PhoneticPassword(userPassword)
 
                 newUser.CommitChanges()
                 newUser.Invoke(adConn.GetDirectoryActionName(CommonActions.SetPassword), userPassword)
@@ -384,7 +385,7 @@ Namespace Directories
                 newUsername = _
                     CreateUniqueUsername(adConn, userGivenName, userSurname, adBase)
 
-                newPassword = CryptographyCommands.CreatePassword(6, 0)
+                newPassword = Create_Password(6, 0)
 
                 Return Create(adConn, newUsername, newPassword, userGivenName, userSurname, _
                     userDescription, userDepartment, profileDirectoryBase, homeDirectoryBase, _
