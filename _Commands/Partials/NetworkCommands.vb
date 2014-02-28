@@ -1031,6 +1031,7 @@ Namespace Commands
 				Monitored_Devices.Sort()
 
 				Dim usage_Rows As New List(Of Row)
+				Dim unhealthy_Rows As New List(Of Row)
 
 				Dim total_A_Assoc As Integer = 0
 				Dim total_B_Assoc As Integer = 0
@@ -1112,6 +1113,13 @@ Namespace Commands
 						found_Devices += 1
 					End If
 
+
+					If CType(ap, IMonitorable).IsHealthy.Status = HealthStatus.Down Then
+						unhealthy_Rows.Add(New Row().Add(ap.Name.ShortName).Add(ap.Description).Add(New Cell(CType(ap, IMonitorable).IsHealthy.Details, 0, IT.[Error])))
+					ElseIf CType(ap, IMonitorable).IsHealthy.Status = HealthStatus.Degraded Then
+						unhealthy_Rows.Add(New Row().Add(ap.Name.ShortName).Add(ap.Description).Add(New Cell(CType(ap, IMonitorable).IsHealthy.Details, 0, IT.[Warning])))
+					End If
+
 				Next
 
 				Dim summary_Rows As New List(Of Row)
@@ -1136,10 +1144,22 @@ Namespace Commands
 					summary_Rows.Add(New Row().Add("APs on B/Ch: " & b_Channel).Add(spread_B_Channels(b_Channel)))
 				Next
 
-				Return New IFixedWidthWriteable() { _
-					Cube.Create(IT.Information, "Access Point Usage", "Name", "Block", "Room", "Model", "A/Ch", "A/Pwr", "A/Assoc", "B/Ch", "B/Pwr", "B/Assoc", "Total/Assoc").Add(New Slice(usage_Rows)), _
-					Cube.Create(IT.Information, "Access Point Summary", "Name", "Value").Add(New Slice(summary_Rows)) _
-				}
+				If unhealthy_Rows.Count > 0 Then
+
+					Return New IFixedWidthWriteable() { _
+						Cube.Create(IT.Information, "Access Point Problems", "Name", "Version", "Status").Add(New Slice(unhealthy_Rows)), _
+						Cube.Create(IT.Information, "Access Point Usage", "Name", "Block", "Room", "Model", "A/Ch", "A/Pwr", "A/Assoc", "B/Ch", "B/Pwr", "B/Assoc", "Total/Assoc").Add(New Slice(usage_Rows)), _
+						Cube.Create(IT.Information, "Access Point Summary", "Name", "Value").Add(New Slice(summary_Rows)) _
+					}
+
+				Else
+
+					Return New IFixedWidthWriteable() { _
+						Cube.Create(IT.Information, "Access Point Usage", "Name", "Block", "Room", "Model", "A/Ch", "A/Pwr", "A/Assoc", "B/Ch", "B/Pwr", "B/Assoc", "Total/Assoc").Add(New Slice(usage_Rows)), _
+						Cube.Create(IT.Information, "Access Point Summary", "Name", "Value").Add(New Slice(summary_Rows)) _
+					}
+				
+				End If
 
 			End Function
 
