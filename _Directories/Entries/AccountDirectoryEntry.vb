@@ -7,24 +7,26 @@ Namespace Directories
     Public MustInherit Class AccountDirectoryEntry
         Inherits BaseDirectoryEntry
 
-#Region " Private Shared Constants "
+#Region " Public Shared Constants "
+
         ''' <summary>
         ''' Private Constant to Define the Name of the Method: Add.
         ''' </summary>
         ''' <remarks></remarks>
-        Private Const METHOD_ADD As String = "Add"
+        Public Const METHOD_ADD As String = "Add"
 
         ''' <summary>
         ''' Private Constant to Define the Name of the Method: SetPassword.
         ''' </summary>
         ''' <remarks></remarks>
-        Private Const METHOD_SETPASSWORD As String = "SetPassword"
+        Public Const METHOD_SETPASSWORD As String = "SetPassword"
 
         ''' <summary>
         ''' Private Constant to Define the Name of the Method: Remove.
         ''' </summary>
         ''' <remarks></remarks>
-        Private Const METHOD_REMOVE As String = "Remove"
+        Public Const METHOD_REMOVE As String = "Remove"
+
 #End Region
 
 #Region " Public Properties "

@@ -46,7 +46,7 @@ Namespace Directories
 	        ''' </summary>
 	        ''' <remarks></remarks>
 	        Private Shared m_BasicWithServer As AuthenticationTypes _
-	            = AuthenticationTypes.ServerBind ' Or AuthenticationTypes.Encryption
+	            = AuthenticationTypes.ServerBind
 	
 	        ''' <summary>
 	        ''' Represents an Authentication Type for a Basic without Explicit Server Bind.
@@ -321,6 +321,10 @@ Namespace Directories
 	                    Return "objectClass"
 	                Case CommonProperties.ObjectCategory
 	                	Return "objectCategory"
+	                Case CommonProperties.UnicodePassword
+	                	Return "unicodePwd"
+	                Case CommonProperties.LockOutTime
+	                	Return "LockOutTime"
 	                Case Else
 	                    Return String.Empty
 	            End Select

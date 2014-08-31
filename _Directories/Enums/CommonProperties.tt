@@ -16,4 +16,6 @@
 <# Add_Enum(n:="ExtensionName", v:=14, d:="The Extension Name of a Directory Entry") #>
 <# Add_Enum(n:="ObjectClass", v:=15, d:="The Object Class of a Directory Entry") #>
 <# Add_Enum(n:="ObjectCategory", v:=16, d:="The Object Category of a Directory Entry") #>
+<# Add_Enum(n:="UnicodePassword", v:=17, d:="The Unicode Password of a Directory Entry") #>
+<# Add_Enum(n:="LockOutTime", v:=18, d:="The LockOut Time of a Directory Entry") #>
 <#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

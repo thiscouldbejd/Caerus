@@ -344,15 +344,10 @@ Namespace Directories
                         .Add(userDepartment)
                 End If
 
+                newUser.CommitChanges()
+
                 ' Set Password
                 newPhoneticPassword = PhoneticPassword(userPassword)
-
-                newUser.CommitChanges()
-                newUser.Invoke(adConn.GetDirectoryActionName(CommonActions.SetPassword), userPassword)
-                newUser.InvokeSet(adConn.GetDirectoryActionName(CommonActions.DisabledAccount), False)
-                newUser.InvokeSet(adConn.GetDirectoryActionName(CommonActions.LockedAccount), False)
-                newUser.InvokeSet(adConn.GetDirectoryActionName(CommonActions.RequiredPassword), False)
-                newUser.CommitChanges()
 
                 Return New UserDirectoryEntry(newUser)
 
@@ -385,7 +380,7 @@ Namespace Directories
                 newUsername = _
                     CreateUniqueUsername(adConn, userGivenName, userSurname, adBase)
 
-                newPassword = Create_Password(6, 0)
+                newPassword = Create_Password(8, 0)
 
                 Return Create(adConn, newUsername, newPassword, userGivenName, userSurname, _
                     userDescription, userDepartment, profileDirectoryBase, homeDirectoryBase, _
@@ -396,6 +391,7 @@ Namespace Directories
                 Return Nothing
 
             End Try
+
         End Function
 
 #End Region
@@ -525,8 +521,8 @@ Namespace Directories
                 Else
                     If commonName.EndsWith((count - 1).ToString) Then
 
-                        commonName = commonName.Substring(0, commonName.Length - (count - 1).ToString.Length) & _
-                        SPACE & count.ToString
+                        commonName = commonName.Substring(0, commonName.Length - ((count - 1).ToString.Length + 1)) & _
+                            SPACE & count.ToString
 
                     Else
 
@@ -547,4 +543,3 @@ Namespace Directories
     End Class
 
 End Namespace
-

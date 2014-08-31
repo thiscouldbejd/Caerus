@@ -200,6 +200,11 @@ Namespace Commands
 
 					' Write Account Created Log Entry
 					resultRow.Add(False)
+					resultRow.Add(Nothing)
+					resultRow.Add(Nothing)
+					resultRow.Add(Nothing)
+					resultRow.Add(Nothing)
+					resultRow.Add(Nothing)
 
 				End If
 
@@ -793,6 +798,86 @@ Namespace Commands
 				Else
 
 					Return Nothing
+
+				End If
+
+			End Function
+
+			<Command( _
+				ResourceContainingType:=GetType(DirectoryCommands), _
+				ResourceName:="CommandDetails", _
+				Name:="reset-password", _
+				Description:="@commandDirectoryDescriptionResetPassword@" _
+			)> _
+			Public Function ProcessCommandResetPassword( _
+				<Configurable( _
+					ResourceContainingType:=GetType(DirectoryCommands), _
+					ResourceName:="CommandDetails", _
+					Description:="@commandDirectoryParameterDescriptionConnectionServer@" _
+				)> _
+				ByVal connectionServer As String, _
+				<Configurable( _
+					ResourceContainingType:=GetType(DirectoryCommands), _
+					ResourceName:="CommandDetails", _
+					Description:="@commandDirectoryParameterDescriptionConnectionRoot@" _
+				)> _
+				ByVal connectionLDAPRoot As String, _
+				<Configurable( _
+					ResourceContainingType:=GetType(DirectoryCommands), _
+					ResourceName:="CommandDetails", _
+					Description:="@commandDirectoryParameterDescriptionConnectionUsername@" _
+				)> _
+				ByVal connectionUsername As String, _
+				<Configurable( _
+					ResourceContainingType:=GetType(DirectoryCommands), _
+					ResourceName:="CommandDetails", _
+					Description:="@commandDirectoryParameterDescriptionConnectionPassword@" _
+				)> _
+				ByVal connectionPassword As String, _
+				<Configurable( _
+					ResourceContainingType:=GetType(DirectoryCommands), _
+					ResourceName:="CommandDetails", _
+					Description:="@commandDirectoryParameterDescriptionEntryRoot@" _
+				)> _
+				ByVal ldapRoot As String, _
+				<Configurable( _
+					ResourceContainingType:=GetType(DirectoryCommands), _
+					ResourceName:="CommandDetails", _
+					Description:="@commandDirectoryParameterDescriptionUserName@" _
+				)> _
+				ByVal userName As String, _
+				<Configurable( _
+					ResourceContainingType:=GetType(DirectoryCommands), _
+					ResourceName:="CommandDetails", _
+					Description:="@commandDirectoryParameterDescriptionPassword@" _
+				)> _
+				ByVal password As String _
+			) As Boolean
+
+				Dim dirConn As IConnection = New AdConnection(AuthenticationType.Basic, connectionLDAPRoot, connectionServer, connectionUsername, _
+					connectionPassword)
+
+				Dim users As System.DirectoryServices.DirectoryEntry() = Searcher.ExecuteQuery(dirConn, SearchScope.SubTree, _
+					New Parameter(dirConn.GetDirectoryPropertyName(CommonProperties.AccountUsername), userName, ParameterComparator.EqualTo), True)
+
+				If Not users Is Nothing AndAlso users.Length = 1 Then
+
+                    users(0).InvokeSet(dirConn.GetDirectoryActionName(CommonActions.DisabledAccount), False)
+                    users(0).InvokeSet(dirConn.GetDirectoryActionName(CommonActions.LockedAccount), False)
+                    users(0).InvokeSet(dirConn.GetDirectoryActionName(CommonActions.RequiredPassword), False)
+
+                    users(0).CommitChanges()
+
+                    users(0).Properties(dirConn.GetDirectoryPropertyName(CommonProperties.LockOutTime)).Value = 0
+                    users(0).Invoke(dirConn.GetDirectoryActionName(CommonActions.SetPassword), New Object() {password})
+
+                    users(0).CommitChanges()
+
+					Return True
+
+				Else
+
+					Return False
 
 				End If
 

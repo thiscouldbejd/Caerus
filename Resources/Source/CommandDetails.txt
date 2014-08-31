@@ -6,6 +6,7 @@ commandDirectoryDescriptionCreateAccount = Create LDAP Directory Account
 commandDirectoryDescriptionGetUser = Get LDAP Directory User Account
 commandDirectoryDescriptionGetGroup = Get LDAP Directory Group
 commandDirectoryDescriptionGetComputer = Get LDAP Directory Computer
+commandDirectoryDescriptionResetPassword = Reset LDAP User Password
 
 ; Directory Command Parameter Descriptions
 
@@ -28,6 +29,8 @@ commandDirectoryParameterDescriptionAccountSuffix = LDAP Principle Name Suffix
 commandDirectoryParameterDescriptionAccountGroups = LDAP Account Groups
 commandDirectoryParameterDescriptionGroupName = LDAP Group Name
 commandDirectoryParameterDescriptionComputerName = LDAP Computer Name
+commandDirectoryParameterDescriptionUserName = LDAP User Name
+commandDirectoryParameterDescriptionPassword = Password
 
 ; Network Command Descriptions
 

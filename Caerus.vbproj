@@ -158,6 +158,8 @@
     <None Include="Resources\Source\CommandDetails.txt" />
     <None Include="Resources\Source\HealthDetails.en-GB.txt" />
     <None Include="Resources\Source\HealthDetails.txt" />
+    <None Include="Resources\Source\LogMessages.en-GB.txt" />
+    <None Include="Resources\Source\LogMessages.txt" />
     <None Include="_Cisco\Definitions\Device.def" />
     <None Include="_Cisco\Enums\AssociationAdditionalAlgorthimType.tt" />
     <None Include="_Cisco\Enums\AssociationAlgorithmType.tt" />
@@ -209,6 +211,8 @@
     <None Include="_Cisco\Generated\CDPEntryCollection.tt" />
     <EmbeddedResource Include="Resources\Compiled\HealthDetails.en-GB.resources" />
     <EmbeddedResource Include="Resources\Compiled\HealthDetails.resources" />
+    <EmbeddedResource Include="Resources\Compiled\LogMessages.en-GB.resources" />
+    <EmbeddedResource Include="Resources\Compiled\LogMessages.resources" />
     <EmbeddedResource Include="_Cisco\Generated\Cisco.AccessPoint.snmp.xml">
       <DependentUpon>AccessPoint.tt</DependentUpon>
     </EmbeddedResource>

@@ -1,0 +1,10 @@
+; Log Messages
+
+directoryCreatedProfileDirBase = CreatedProfileDirBase
+directoryCreatedHomeDirBase = CreatedHomeDirBase
+directoryAccountUsername = AccountUsername
+directoryAccountPassword = AccountPassword
+directoryAccountPasswordPhonetic = AccountPasswordPhonetic
+directoryCreatedAccount = CreatedAccount
+directoryAddedToGroups = AddedToGroups
+directorySetHomeDirSecurity = SetHomeDirSecurity
