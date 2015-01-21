@@ -17,7 +17,8 @@
     <!-- Note: If MSBuild.Community.Tasks is not installed on Build Machine -->
     <!-- Set the MSBuildCommunityTasksPath Property in MSBuild.Community.Tasks.Targets (Packages) to '.' e.g. -->
     <!-- <MSBuildCommunityTasksPath Condition="'$(MSBuildCommunityTasksPath)' == ''">.</MSBuildCommunityTasksPath> -->
-    <MSBuildTasksPath>Packages\MSBuildTasks.1.4.0.65\tools</MSBuildTasksPath>
+    <MSBuildCommunityTasksPath Condition="'$(MSBuildCommunityTasksPath)' == ''">.</MSBuildCommunityTasksPath>
+    <MSBuildTasksPath>Packages\MSBuildTasks.1.4.0.88\tools</MSBuildTasksPath>
     <NUnitToolPath>Packages\NUnit.Runners.2.6.2\tools</NUnitToolPath>
     <RemoveIntegerChecks>False</RemoveIntegerChecks>
     <OptionExplicit>On</OptionExplicit>
@@ -83,13 +84,15 @@
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Hermes">
+      <HintPath>Packages\Hermes.1.0.5499.25648\lib\net40\Hermes.dll</HintPath>
+    </Reference>
     <Reference Include="Leviathan">
       <HintPath>$(LEVIATHAN_PATH)\Leviathan.exe</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Hermes">
-      <HintPath>Packages\Hermes.1.0.5220.19823\lib\net40\Hermes.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nunit.framework">
+      <HintPath>Packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -100,11 +103,6 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <Reference Include="nunit.framework">
-      <HintPath>Packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Enums\DeviceStatus.tt" />

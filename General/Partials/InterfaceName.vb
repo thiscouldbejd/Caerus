@@ -40,6 +40,7 @@
 								Not StringCommands.IsNumeric(l_shortName(j)) Then
 
 								' Weird Bug with some Interface Names | Investigating!
+								' TODO: Handle PortChannel0 --> po0'
 								If l_shortName.Length > Math.Max(2, j + 1) Then _
 									l_shortName = l_shortName.Substring(0, 2).ToLower & l_shortName.Substring(j + 1).ToLower
 
